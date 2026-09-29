@@ -1,0 +1,457 @@
+{
+ "_comment": "Anchors are reference pixels on the 586x505 painted map (reference/terrain_classes.png). The locator refines each anchor against the real terrain with the given strategy. search_px is the search radius in reference pixels (~15 blocks each). tier = story priority (1 highest).",
+ "landmarks": [
+  {
+   "id": "southern_water_tribe",
+   "name": "Southern Water Tribe",
+   "nation": "water",
+   "tier": 1,
+   "story": [
+    "1x01 The Boy in the Iceberg",
+    "1x02 The Avatar Returns",
+    "3x10 Day of Black Sun (fleet)"
+   ],
+   "anchor_px": [
+    250,
+    425
+   ],
+   "strategy": "coast_flat",
+   "search_px": 26,
+   "footprint_r": 70,
+   "builder": "southern_water_tribe",
+   "quest_start": true
+  },
+  {
+   "id": "northern_water_tribe",
+   "name": "Northern Water Tribe (Agna Qel'a) & Spirit Oasis",
+   "nation": "water",
+   "tier": 1,
+   "story": [
+    "1x18 The Waterbending Master",
+    "1x19 The Siege of the North, Part 1",
+    "1x20 The Siege of the North, Part 2"
+   ],
+   "anchor_px": [
+    279,
+    60
+   ],
+   "strategy": "coast",
+   "search_px": 16,
+   "footprint_r": 230,
+   "builder": "northern_water_tribe"
+  },
+  {
+   "id": "foggy_swamp",
+   "name": "The Foggy Swamp (Banyan-Grove Tree)",
+   "nation": "earth",
+   "tier": 1,
+   "story": [
+    "2x04 The Swamp",
+    "3x10 Day of Black Sun (swamp benders)"
+   ],
+   "anchor_px": [
+    332.5,
+    299.2
+   ],
+   "strategy": "anchor",
+   "search_px": 0,
+   "footprint_r": 210,
+   "builder": "foggy_swamp",
+   "_note": "The swamp wetland (mud-banked channels) is painted into the terrain here; the banyan tree is placed at its heart."
+  },
+  {
+   "id": "southern_air_temple",
+   "name": "Southern Air Temple",
+   "nation": "air",
+   "tier": 2,
+   "story": [
+    "1x03 The Southern Air Temple"
+   ],
+   "anchor_px": [
+    275,
+    366
+   ],
+   "strategy": "peak",
+   "search_px": 18,
+   "footprint_r": 80,
+   "builder": "southern_air_temple"
+  },
+  {
+   "id": "northern_air_temple",
+   "name": "Northern Air Temple (Mechanist modifications)",
+   "nation": "air",
+   "tier": 2,
+   "story": [
+    "1x17 The Northern Air Temple"
+   ],
+   "anchor_px": [
+    325,
+    108
+   ],
+   "strategy": "peak",
+   "search_px": 22,
+   "footprint_r": 75,
+   "builder": "northern_air_temple"
+  },
+  {
+   "id": "eastern_air_temple",
+   "name": "Eastern Air Temple",
+   "nation": "air",
+   "tier": 2,
+   "story": [
+    "2x19 The Guru"
+   ],
+   "anchor_px": [
+    530,
+    302
+   ],
+   "strategy": "peak",
+   "search_px": 20,
+   "footprint_r": 80,
+   "builder": "eastern_air_temple"
+  },
+  {
+   "id": "western_air_temple",
+   "name": "Western Air Temple (hanging, inverted)",
+   "nation": "air",
+   "tier": 2,
+   "story": [
+    "3x12 The Western Air Temple",
+    "3x13 The Firebending Masters",
+    "3x16 The Southern Raiders"
+   ],
+   "anchor_px": [
+    98,
+    136
+   ],
+   "strategy": "ravine",
+   "search_px": 20,
+   "footprint_r": 110,
+   "builder": "western_air_temple"
+  },
+  {
+   "id": "kyoshi_island",
+   "name": "Kyoshi Island (village & Avatar Kyoshi statue)",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "1x04 The Warriors of Kyoshi"
+   ],
+   "anchor_px": [
+    360,
+    390
+   ],
+   "strategy": "island",
+   "search_px": 30,
+   "footprint_r": 90,
+   "builder": "kyoshi_island"
+  },
+  {
+   "id": "omashu",
+   "name": "Omashu (with mail delivery chutes)",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "1x05 The King of Omashu",
+    "2x02 The Cave of Two Lovers",
+    "2x03 Return to Omashu"
+   ],
+   "anchor_px": [
+    325,
+    262
+   ],
+   "strategy": "peak",
+   "search_px": 16,
+   "footprint_r": 170,
+   "builder": "omashu"
+  },
+  {
+   "id": "senlin_village",
+   "name": "Senlin Village & the Spirit Forest (Hei Bai)",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "1x07 The Spirit World (Winter Solstice, Part 1)"
+   ],
+   "anchor_px": [
+    299,
+    250
+   ],
+   "strategy": "flat",
+   "search_px": 10,
+   "footprint_r": 90,
+   "builder": "senlin_village"
+  },
+  {
+   "id": "great_divide",
+   "name": "The Great Divide",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "1x11 The Great Divide"
+   ],
+   "anchor_px": [
+    303,
+    192
+   ],
+   "strategy": "canyon",
+   "search_px": 10,
+   "footprint_r": 330,
+   "orientation_deg": 18,
+   "builder": "great_divide"
+  },
+  {
+   "id": "gaoling",
+   "name": "Gaoling (Beifong Estate & Earth Rumble VI arena)",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "2x06 The Blind Bandit",
+    "3x21 Sozin's Comet (Toph's parents)"
+   ],
+   "anchor_px": [
+    415,
+    318
+   ],
+   "strategy": "flat",
+   "search_px": 12,
+   "footprint_r": 150,
+   "builder": "gaoling"
+  },
+  {
+   "id": "serpents_pass",
+   "name": "The Serpent's Pass",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "2x12 The Serpent's Pass"
+   ],
+   "anchor_px": [
+    447,
+    208
+   ],
+   "strategy": "path",
+   "path_px": [
+    [
+     452,
+     224
+    ],
+    [
+     448,
+     211
+    ],
+    [
+     441,
+     193
+    ]
+   ],
+   "search_px": 0,
+   "footprint_r": 280,
+   "builder": "serpents_pass"
+  },
+  {
+   "id": "ba_sing_se",
+   "name": "Ba Sing Se",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "2x13 The Drill",
+    "2x14 City of Walls and Secrets",
+    "2x15 Tales of Ba Sing Se",
+    "2x16 Appa's Lost Days",
+    "2x17 Lake Laogai",
+    "2x18 The Earth King",
+    "2x20 The Crossroads of Destiny",
+    "3x21 Sozin's Comet (reclaiming)"
+   ],
+   "anchor_px": [
+    455,
+    124
+   ],
+   "strategy": "inland_max",
+   "search_px": 18,
+   "footprint_r": 600,
+   "builder": "ba_sing_se"
+  },
+  {
+   "id": "full_moon_bay",
+   "name": "Full Moon Bay (hidden ferry station)",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "2x12 The Serpent's Pass"
+   ],
+   "anchor_px": [
+    459,
+    232
+   ],
+   "strategy": "coast",
+   "search_px": 12,
+   "footprint_r": 70,
+   "builder": "full_moon_bay"
+  },
+  {
+   "id": "wan_shi_tong_library",
+   "name": "Wan Shi Tong's Library (Si Wong Desert)",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "2x10 The Library"
+   ],
+   "anchor_px": [
+    405,
+    262
+   ],
+   "strategy": "desert",
+   "search_px": 18,
+   "footprint_r": 80,
+   "builder": "wan_shi_tong_library"
+  },
+  {
+   "id": "misty_palms_oasis",
+   "name": "Misty Palms Oasis (Si Wong Desert)",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "2x10 The Library",
+    "2x11 The Desert"
+   ],
+   "anchor_px": [
+    365,
+    269
+   ],
+   "strategy": "flat",
+   "search_px": 8,
+   "footprint_r": 55,
+   "builder": "misty_palms_oasis"
+  },
+  {
+   "id": "si_wong_rock",
+   "name": "Si Wong Desert rock (where Appa was taken)",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "2x11 The Desert",
+    "2x16 Appa's Lost Days"
+   ],
+   "anchor_px": [
+    395,
+    234
+   ],
+   "strategy": "desert",
+   "search_px": 6,
+   "footprint_r": 45,
+   "builder": "si_wong_rock"
+  },
+  {
+   "id": "wulong_forest",
+   "name": "Wulong Forest (rock pillars of the final battle)",
+   "nation": "earth",
+   "tier": 3,
+   "story": [
+    "3x20 Sozin's Comet, Part 3: Into the Inferno",
+    "3x21 Sozin's Comet, Part 4: Avatar Aang"
+   ],
+   "anchor_px": [
+    281,
+    232
+   ],
+   "strategy": "flat",
+   "search_px": 12,
+   "footprint_r": 260,
+   "builder": "wulong_forest"
+  },
+  {
+   "id": "crescent_island",
+   "name": "Crescent Island Fire Temple (Avatar Roku's temple)",
+   "nation": "fire",
+   "tier": 4,
+   "story": [
+    "1x08 Avatar Roku (Winter Solstice, Part 2)"
+   ],
+   "anchor_px": [
+    190,
+    251
+   ],
+   "strategy": "island",
+   "search_px": 14,
+   "footprint_r": 70,
+   "builder": "crescent_island"
+  },
+  {
+   "id": "sun_warriors",
+   "name": "The Sun Warriors' Ancient City (ruins)",
+   "nation": "fire",
+   "tier": 4,
+   "story": [
+    "3x13 The Firebending Masters"
+   ],
+   "anchor_px": [
+    22,
+    268
+   ],
+   "strategy": "flat",
+   "search_px": 14,
+   "footprint_r": 150,
+   "builder": "sun_warriors"
+  },
+  {
+   "id": "boiling_rock",
+   "name": "The Boiling Rock",
+   "nation": "fire",
+   "tier": 4,
+   "story": [
+    "3x14 The Boiling Rock, Part 1",
+    "3x15 The Boiling Rock, Part 2"
+   ],
+   "anchor_px": [
+    78,
+    205
+   ],
+   "strategy": "sea",
+   "search_px": 14,
+   "footprint_r": 165,
+   "builder": "boiling_rock"
+  },
+  {
+   "id": "ember_island",
+   "name": "Ember Island (beach, royal beach house & Ember Island Players theater)",
+   "nation": "fire",
+   "tier": 4,
+   "story": [
+    "3x05 The Beach",
+    "3x17 The Ember Island Players",
+    "3x18 Sozin's Comet, Part 1"
+   ],
+   "anchor_px": [
+    164,
+    260
+   ],
+   "strategy": "island",
+   "search_px": 14,
+   "footprint_r": 110,
+   "builder": "ember_island"
+  },
+  {
+   "id": "fire_nation_capital",
+   "name": "Fire Nation Capital (Royal Caldera, Palace & Royal Plaza)",
+   "nation": "fire",
+   "tier": 4,
+   "story": [
+    "3x01 The Awakening",
+    "3x10 Day of Black Sun, Part 1",
+    "3x11 Day of Black Sun, Part 2",
+    "3x19 Sozin's Comet, Part 2",
+    "3x21 Sozin's Comet, Part 4"
+   ],
+   "anchor_px": [
+    45,
+    238
+   ],
+   "strategy": "peak",
+   "search_px": 14,
+   "footprint_r": 330,
+   "builder": "fire_nation_capital"
+  }
+ ]
+}

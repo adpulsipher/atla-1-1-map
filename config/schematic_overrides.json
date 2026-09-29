@@ -1,0 +1,15 @@
+{
+  "_comment": "Community schematics that replace a procedural builder. An entry is only used when approved=true, i.e. after it passed the fidelity review (canon layout, materials and palette; no heavy artistic liberties). Files are Sponge .schem (v2/v3) relative to the repo root; block ids are remapped to the world's version on import. Example entry (disabled):",
+  "overrides": {
+    "example_landmark_id": {
+      "approved": false,
+      "file": "schematics_community/example.schem",
+      "source_url": "https://www.planetminecraft.com/project/...",
+      "author": "",
+      "license": "",
+      "fidelity_review": "Checked against: episode references, silhouette, palette, room layout.",
+      "facing": "south",
+      "y_offset": 0
+    }
+  }
+}

@@ -1,0 +1,5677 @@
+{
+  "generator": "atla_builder 1.0.0",
+  "generated_at": "2026-09-29T00:05:05+00:00",
+  "world": {
+    "name": "ATLAB9k",
+    "data_version": 3837,
+    "sea_level": 62,
+    "terrain_bounds": {
+      "min_x": -5120,
+      "min_z": -4480,
+      "max_x": 5120,
+      "max_z": 4480
+    },
+    "georef": {
+      "ax": 15.989547038327526,
+      "bx": -4684.937282229965,
+      "az": 15.989837398373984,
+      "bz": -4044.9288617886177,
+      "method": "registered",
+      "score": 0.9743
+    },
+    "output_world": "ATLAB9k_populated"
+  },
+  "coordinate_system": "Minecraft block coordinates (x east, z south, y up). centre.y is the walkable surface at the landmark centre; POIs mark quest-relevant spots.",
+  "quest_start": {
+    "x": -394,
+    "y": 65,
+    "z": 2738
+  },
+  "landmarks": [
+    {
+      "id": "southern_water_tribe",
+      "name": "Southern Water Tribe",
+      "nation": "water",
+      "story_tier": 1,
+      "episodes": [
+        "1x01 The Boy in the Iceberg",
+        "1x02 The Avatar Returns",
+        "3x10 Day of Black Sun (fleet)"
+      ],
+      "center": {
+        "x": -394,
+        "y": 65,
+        "z": 2738
+      },
+      "footprint_radius": 66.0,
+      "bbox": {
+        "min": {
+          "x": -480,
+          "y": 48,
+          "z": 2528
+        },
+        "max": {
+          "x": -321,
+          "y": 95,
+          "z": 2815
+        }
+      },
+      "site": {
+        "id": "southern_water_tribe",
+        "x": -394,
+        "y": 62,
+        "z": 2698,
+        "facing": "north",
+        "fit_radius": 11.3,
+        "strategy": "coast_flat",
+        "anchor": [
+          -687,
+          2750
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": -118.0
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.water.southern_water_tribe",
+        "seed": 2079092247,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "southern_water_tribe.schem",
+            "size": [
+              95,
+              37,
+              250
+            ],
+            "world_origin": [
+              -441,
+              50,
+              2536
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "snow shelf levelled at y=64, blended over 22 blocks; beach cut to the dock"
+      ],
+      "points_of_interest": {
+        "watchtower": {
+          "x": -402,
+          "y": 81,
+          "z": 2695,
+          "desc": ""
+        },
+        "village_gate": {
+          "x": -394,
+          "y": 65,
+          "z": 2692,
+          "desc": ""
+        },
+        "gran_gran_igloo": {
+          "x": -376,
+          "y": 65,
+          "z": 2744,
+          "desc": ""
+        },
+        "dock": {
+          "x": -394,
+          "y": 65,
+          "z": 2664,
+          "desc": ""
+        },
+        "village_center": {
+          "x": -394,
+          "y": 65,
+          "z": 2738,
+          "desc": "Plaza fire pit; story start (Book 1, ch.1)"
+        },
+        "aang_iceberg": {
+          "x": -394,
+          "y": 66,
+          "z": 2548,
+          "desc": "Aang & Appa frozen for 100 years"
+        }
+      },
+      "notes": [
+        "Book 1 appearance: snow wall, watchtower, igloos & hide tents; Aang's iceberg offshore."
+      ],
+      "write_stats": {
+        "chunks": 91,
+        "missing_chunks": 0,
+        "blocks": 103729,
+        "promoted": 91
+      }
+    },
+    {
+      "id": "northern_water_tribe",
+      "name": "Northern Water Tribe (Agna Qel'a) & Spirit Oasis",
+      "nation": "water",
+      "story_tier": 1,
+      "episodes": [
+        "1x18 The Waterbending Master",
+        "1x19 The Siege of the North, Part 1",
+        "1x20 The Siege of the North, Part 2"
+      ],
+      "center": {
+        "x": -250,
+        "y": 96,
+        "z": -3096
+      },
+      "footprint_radius": 205.0,
+      "bbox": {
+        "min": {
+          "x": -464,
+          "y": 0,
+          "z": -3312
+        },
+        "max": {
+          "x": -33,
+          "y": 159,
+          "z": -2961
+        }
+      },
+      "site": {
+        "id": "northern_water_tribe",
+        "x": -250,
+        "y": 46,
+        "z": -3026,
+        "facing": "north",
+        "fit_radius": 4.0,
+        "strategy": "coast",
+        "anchor": [
+          -223,
+          -3085
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": -53.9
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.water.northern_water_tribe",
+        "seed": 1466991534,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "northern_water_tribe.schem",
+            "size": [
+              357,
+              100,
+              302
+            ],
+            "world_origin": [
+              -424,
+              56,
+              -3270
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "ice shelf terraced into 4 tiers + palace plateau; city front raised out of the bay"
+      ],
+      "points_of_interest": {
+        "chief_palace": {
+          "x": -250,
+          "y": 116,
+          "z": -3096,
+          "desc": ""
+        },
+        "harbour_water_gate": {
+          "x": -250,
+          "y": 63,
+          "z": -2970,
+          "desc": ""
+        },
+        "spirit_oasis": {
+          "x": -250,
+          "y": 80,
+          "z": -3166,
+          "desc": ""
+        },
+        "tui_and_la_koi": {
+          "x": -253,
+          "y": 78,
+          "z": -3164,
+          "desc": ""
+        }
+      },
+      "notes": [
+        "Tiered ice city with ring + radial canals, great harbour wall with water gate, Chief's palace plateau, and the enclosed Spirit Oasis (koi spawn POI)."
+      ],
+      "write_stats": {
+        "chunks": 485,
+        "missing_chunks": 0,
+        "blocks": 3425296,
+        "promoted": 485
+      }
+    },
+    {
+      "id": "foggy_swamp",
+      "name": "The Foggy Swamp (Banyan-Grove Tree)",
+      "nation": "earth",
+      "story_tier": 1,
+      "episodes": [
+        "2x04 The Swamp",
+        "3x10 Day of Black Sun (swamp benders)"
+      ],
+      "center": {
+        "x": 632,
+        "y": 63,
+        "z": 739
+      },
+      "footprint_radius": 200.0,
+      "bbox": {
+        "min": {
+          "x": 432,
+          "y": 48,
+          "z": 544
+        },
+        "max": {
+          "x": 831,
+          "y": 143,
+          "z": 927
+        }
+      },
+      "site": {
+        "id": "foggy_swamp",
+        "x": 632,
+        "y": 62,
+        "z": 739,
+        "facing": "east",
+        "fit_radius": 210.0,
+        "strategy": "anchor",
+        "anchor": [
+          631,
+          739
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 0.0
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.foggy_swamp",
+        "seed": 455056343,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "foggy_swamp.schem",
+            "size": [
+              385,
+              78,
+              363
+            ],
+            "world_origin": [
+              445,
+              57,
+              554
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [],
+      "points_of_interest": {
+        "banyan_tree_heart": {
+          "x": 632,
+          "y": 64,
+          "z": 739,
+          "desc": "Heart of the swamp: visions (2x04 The Swamp)"
+        },
+        "swamp_tribe_camp": {
+          "x": 528,
+          "y": 65,
+          "z": 791,
+          "desc": "Huu, Due and Tho"
+        }
+      },
+      "notes": [
+        "Giant banyan (canopy ~70 wide) with aerial roots; 18 surface roots across the painted swamp."
+      ],
+      "write_stats": {
+        "chunks": 260,
+        "missing_chunks": 0,
+        "blocks": 153942,
+        "promoted": 260
+      }
+    },
+    {
+      "id": "southern_air_temple",
+      "name": "Southern Air Temple",
+      "nation": "air",
+      "story_tier": 2,
+      "episodes": [
+        "1x03 The Southern Air Temple"
+      ],
+      "center": {
+        "x": -138,
+        "y": 249,
+        "z": 1810
+      },
+      "footprint_radius": 70.0,
+      "bbox": {
+        "min": {
+          "x": -208,
+          "y": 144,
+          "z": 1744
+        },
+        "max": {
+          "x": -81,
+          "y": 303,
+          "z": 1871
+        }
+      },
+      "site": {
+        "id": "southern_air_temple",
+        "x": -138,
+        "y": 272,
+        "z": 1810,
+        "facing": "east",
+        "fit_radius": 144.3,
+        "strategy": "peak",
+        "anchor": [
+          -287,
+          1807
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 21.9
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.air.southern_air_temple",
+        "seed": 698025236,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "southern_air_temple.schem",
+            "size": [
+              85,
+              112,
+              83
+            ],
+            "world_origin": [
+              -168,
+              189,
+              1768
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=26->58 at y=248",
+        "summit cut from y=280 to a y=248 plaza; temple towers step down the flanks",
+        "level pad r=11->18 at y=242"
+      ],
+      "points_of_interest": {
+        "sanctuary_door": {
+          "x": -138,
+          "y": 249,
+          "z": 1797,
+          "desc": "Air-horn lock opened by airbending"
+        },
+        "avatar_statue_hall": {
+          "x": -138,
+          "y": 249,
+          "z": 1810,
+          "desc": "Statues of past Avatars; Roku's statue"
+        },
+        "airball_court": {
+          "x": -144,
+          "y": 243,
+          "z": 1844,
+          "desc": ""
+        },
+        "mountain_stair_bottom": {
+          "x": -84,
+          "y": 192,
+          "z": 1784,
+          "desc": ""
+        },
+        "temple_plaza": {
+          "x": -138,
+          "y": 249,
+          "z": 1810,
+          "desc": "Southern Air Temple; Gyatso memorial"
+        }
+      },
+      "notes": [
+        "Plaza y=248; sanctuary cone tip y=300; 7 towers on the flanks."
+      ],
+      "write_stats": {
+        "chunks": 55,
+        "missing_chunks": 0,
+        "blocks": 192206,
+        "promoted": 55
+      }
+    },
+    {
+      "id": "northern_air_temple",
+      "name": "Northern Air Temple (Mechanist modifications)",
+      "nation": "air",
+      "story_tier": 2,
+      "episodes": [
+        "1x17 The Northern Air Temple"
+      ],
+      "center": {
+        "x": 582,
+        "y": 259,
+        "z": -2234
+      },
+      "footprint_radius": 70.0,
+      "bbox": {
+        "min": {
+          "x": 512,
+          "y": 192,
+          "z": -2304
+        },
+        "max": {
+          "x": 655,
+          "y": 319,
+          "z": -2161
+        }
+      },
+      "site": {
+        "id": "northern_air_temple",
+        "x": 582,
+        "y": 306,
+        "z": -2234,
+        "facing": "south",
+        "fit_radius": 236.9,
+        "strategy": "peak",
+        "anchor": [
+          511,
+          -2318
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 111.8
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.air.northern_air_temple",
+        "seed": 283527588,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "northern_air_temple.schem",
+            "size": [
+              80,
+              108,
+              87
+            ],
+            "world_origin": [
+              538,
+              206,
+              -2271
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=18->60 at y=258",
+        "spire summit trimmed from y=311 to y=258; towers cling to the flanks"
+      ],
+      "points_of_interest": {
+        "mechanist_workshop": {
+          "x": 598,
+          "y": 259,
+          "z": -2240,
+          "desc": "The Mechanist's workshop (invention lab)"
+        },
+        "war_balloon_prototype": {
+          "x": 566,
+          "y": 274,
+          "z": -2224,
+          "desc": ""
+        },
+        "gas_cavern": {
+          "x": 582,
+          "y": 213,
+          "z": -2234,
+          "desc": "Natural-gas cave under the temple"
+        },
+        "temple_plaza": {
+          "x": 582,
+          "y": 259,
+          "z": -2234,
+          "desc": ""
+        },
+        "approach_stair_bottom": {
+          "x": 544,
+          "y": 230,
+          "z": -2200,
+          "desc": ""
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 63,
+        "missing_chunks": 0,
+        "blocks": 172252,
+        "promoted": 63
+      }
+    },
+    {
+      "id": "eastern_air_temple",
+      "name": "Eastern Air Temple",
+      "nation": "air",
+      "story_tier": 2,
+      "episodes": [
+        "2x19 The Guru"
+      ],
+      "center": {
+        "x": 3750,
+        "y": 245,
+        "z": 762
+      },
+      "footprint_radius": 75.0,
+      "bbox": {
+        "min": {
+          "x": 3680,
+          "y": 144,
+          "z": 704
+        },
+        "max": {
+          "x": 3807,
+          "y": 303,
+          "z": 831
+        }
+      },
+      "site": {
+        "id": "eastern_air_temple",
+        "x": 3750,
+        "y": 245,
+        "z": 762,
+        "facing": "west",
+        "fit_radius": 181.1,
+        "strategy": "peak",
+        "anchor": [
+          3789,
+          784
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 175.3
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.air.eastern_air_temple",
+        "seed": 1605051196,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "eastern_air_temple.schem",
+            "size": [
+              116,
+              123,
+              111
+            ],
+            "world_origin": [
+              3689,
+              166,
+              707
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=20->48 at y=244"
+      ],
+      "points_of_interest": {
+        "guru_pathik_ledge": {
+          "x": 3779,
+          "y": 244,
+          "z": 758,
+          "desc": "Chakra lessons (2x19 The Guru)"
+        },
+        "temple_plaza": {
+          "x": 3750,
+          "y": 245,
+          "z": 762,
+          "desc": ""
+        },
+        "approach_stair_bottom": {
+          "x": 3758,
+          "y": 209,
+          "z": 804,
+          "desc": ""
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 50,
+        "missing_chunks": 0,
+        "blocks": 214039,
+        "promoted": 50
+      }
+    },
+    {
+      "id": "western_air_temple",
+      "name": "Western Air Temple (hanging, inverted)",
+      "nation": "air",
+      "story_tier": 2,
+      "episodes": [
+        "3x12 The Western Air Temple",
+        "3x13 The Firebending Masters",
+        "3x16 The Southern Raiders"
+      ],
+      "center": {
+        "x": -3344,
+        "y": 89,
+        "z": -1883
+      },
+      "footprint_radius": 170.0,
+      "bbox": {
+        "min": {
+          "x": -3504,
+          "y": 80,
+          "z": -1952
+        },
+        "max": {
+          "x": -3185,
+          "y": 271,
+          "z": -1825
+        }
+      },
+      "site": {
+        "id": "western_air_temple",
+        "x": -3194,
+        "y": 172,
+        "z": -1958,
+        "facing": "north",
+        "fit_radius": 59.1,
+        "strategy": "ravine",
+        "anchor": [
+          -3117,
+          -1870
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {
+          "gorge_axis_deg": 165.0
+        },
+        "angle_deg": -62.9
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.air.western_air_temple",
+        "seed": 34378499,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "western_air_temple.schem",
+            "size": [
+              294,
+              96,
+              107
+            ],
+            "world_origin": [
+              -3480,
+              88,
+              -1936
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "gorge 280x44 carved along the ridge, floor y=88, rim y~183"
+      ],
+      "points_of_interest": {
+        "waterfall": {
+          "x": -3189,
+          "y": 183,
+          "z": -1924,
+          "desc": ""
+        },
+        "fountain_courtyard": {
+          "x": -3341,
+          "y": 155,
+          "z": -1871,
+          "desc": "Pai Sho table fountain"
+        },
+        "rim_entrance": {
+          "x": -3477,
+          "y": 184,
+          "z": -1875,
+          "desc": "Temple is invisible from the plateau above"
+        },
+        "gorge_floor": {
+          "x": -3344,
+          "y": 89,
+          "z": -1883,
+          "desc": ""
+        }
+      },
+      "notes": [
+        "13 inverted towers hang from both rims at y~178; gorge floor y=88."
+      ],
+      "write_stats": {
+        "chunks": 83,
+        "missing_chunks": 0,
+        "blocks": 1991162,
+        "promoted": 83
+      }
+    },
+    {
+      "id": "kyoshi_island",
+      "name": "Kyoshi Island (village & Avatar Kyoshi statue)",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "1x04 The Warriors of Kyoshi"
+      ],
+      "center": {
+        "x": 762,
+        "y": 68,
+        "z": 2342
+      },
+      "footprint_radius": 90.0,
+      "bbox": {
+        "min": {
+          "x": 704,
+          "y": 48,
+          "z": 2240
+        },
+        "max": {
+          "x": 847,
+          "y": 143,
+          "z": 2415
+        }
+      },
+      "site": {
+        "id": "kyoshi_island",
+        "x": 854,
+        "y": 141,
+        "z": 2218,
+        "facing": "north",
+        "fit_radius": 123.2,
+        "strategy": "island",
+        "anchor": [
+          1071,
+          2191
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {
+          "island_area_blocks": 93152
+        },
+        "angle_deg": -99.2
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.kyoshi_island",
+        "seed": 1196668605,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "kyoshi_island.schem",
+            "size": [
+              123,
+              62,
+              155
+            ],
+            "world_origin": [
+              715,
+              56,
+              2253
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=16->30 at y=67",
+        "level pad r=7->12 at y=92",
+        "level pad r=7->12 at y=69",
+        "level pad r=7->12 at y=66",
+        "level pad r=7->12 at y=67",
+        "level pad r=8->13 at y=96",
+        "level pad r=8->13 at y=93",
+        "level pad r=8->13 at y=68",
+        "level pad r=6->11 at y=79",
+        "level pad r=6->11 at y=108",
+        "level pad r=6->11 at y=89",
+        "level pad r=6->11 at y=67",
+        "level pad r=6->11 at y=98",
+        "level pad r=6->11 at y=103",
+        "level pad r=6->11 at y=70",
+        "level pad r=6->11 at y=98",
+        "level pad r=6->11 at y=99",
+        "level pad r=6->11 at y=67",
+        "level pad r=6->11 at y=62",
+        "level pad r=14->20 at y=82"
+      ],
+      "points_of_interest": {
+        "kyoshi_statue": {
+          "x": 762,
+          "y": 68,
+          "z": 2342,
+          "desc": "Avatar Kyoshi statue (village square)"
+        },
+        "kyoshi_warriors_dojo": {
+          "x": 780,
+          "y": 83,
+          "z": 2306,
+          "desc": "Suki & the Kyoshi Warriors"
+        },
+        "harbour_pier": {
+          "x": 728,
+          "y": 64,
+          "z": 2406,
+          "desc": "Unagi waters beyond"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 67,
+        "missing_chunks": 0,
+        "blocks": 129685,
+        "promoted": 67
+      }
+    },
+    {
+      "id": "omashu",
+      "name": "Omashu (with mail delivery chutes)",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "1x05 The King of Omashu",
+        "2x02 The Cave of Two Lovers",
+        "2x03 Return to Omashu"
+      ],
+      "center": {
+        "x": 658,
+        "y": 152,
+        "z": 254
+      },
+      "footprint_radius": 170.0,
+      "bbox": {
+        "min": {
+          "x": 480,
+          "y": 48,
+          "z": 80
+        },
+        "max": {
+          "x": 831,
+          "y": 191,
+          "z": 431
+        }
+      },
+      "site": {
+        "id": "omashu",
+        "x": 658,
+        "y": 155,
+        "z": 254,
+        "facing": "north",
+        "fit_radius": 262.1,
+        "strategy": "peak",
+        "anchor": [
+          511,
+          144
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": -108.6
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.omashu",
+        "seed": 349247910,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "omashu.schem",
+            "size": [
+              221,
+              97,
+              255
+            ],
+            "world_origin": [
+              548,
+              95,
+              110
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "peak reshaped into a 4-tier mesa (y 97..151) ringed by a 21-wide chasm"
+      ],
+      "points_of_interest": {
+        "city_gate": {
+          "x": 658,
+          "y": 98,
+          "z": 144,
+          "desc": "Omashu gate (bridge over the chasm)"
+        },
+        "king_bumi_palace": {
+          "x": 658,
+          "y": 152,
+          "z": 254,
+          "desc": "Throne room; Bumi's riddles"
+        },
+        "mail_chute_1_top": {
+          "x": 678,
+          "y": 157,
+          "z": 270,
+          "desc": "Mail delivery chute (ride it!)"
+        },
+        "mail_chute_2_top": {
+          "x": 658,
+          "y": 157,
+          "z": 280,
+          "desc": "Mail delivery chute (ride it!)"
+        },
+        "mail_chute_3_top": {
+          "x": 637,
+          "y": 157,
+          "z": 270,
+          "desc": "Mail delivery chute (ride it!)"
+        },
+        "outer_ring": {
+          "x": 658,
+          "y": 98,
+          "z": 154,
+          "desc": ""
+        }
+      },
+      "notes": [
+        "City radius 110, tiers [97, 115, 133, 151]; gate/bridge face north."
+      ],
+      "write_stats": {
+        "chunks": 394,
+        "missing_chunks": 0,
+        "blocks": 1510114,
+        "promoted": 394
+      }
+    },
+    {
+      "id": "senlin_village",
+      "name": "Senlin Village & the Spirit Forest (Hei Bai)",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "1x07 The Spirit World (Winter Solstice, Part 1)"
+      ],
+      "center": {
+        "x": 190,
+        "y": 85,
+        "z": 14
+      },
+      "footprint_radius": 60.0,
+      "bbox": {
+        "min": {
+          "x": 48,
+          "y": 48,
+          "z": -48
+        },
+        "max": {
+          "x": 255,
+          "y": 143,
+          "z": 79
+        }
+      },
+      "site": {
+        "id": "senlin_village",
+        "x": 190,
+        "y": 84,
+        "z": 14,
+        "facing": "north",
+        "fit_radius": 81.0,
+        "strategy": "flat",
+        "anchor": [
+          95,
+          -47
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": -115.9
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.senlin_village",
+        "seed": 943058918,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "senlin_village.schem",
+            "size": [
+              176,
+              45,
+              103
+            ],
+            "world_origin": [
+              62,
+              61,
+              -30
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=10->18 at y=84",
+        "level pad r=8->13 at y=74",
+        "level pad r=7->12 at y=87",
+        "level pad r=6->11 at y=78",
+        "level pad r=7->12 at y=95",
+        "level pad r=6->11 at y=84",
+        "level pad r=7->12 at y=87",
+        "level pad r=6->11 at y=85",
+        "level pad r=6->11 at y=77",
+        "level pad r=6->11 at y=86",
+        "level pad r=6->11 at y=80",
+        "level pad r=6->11 at y=84",
+        "level pad r=6->11 at y=83"
+      ],
+      "points_of_interest": {
+        "village_square": {
+          "x": 190,
+          "y": 85,
+          "z": 14,
+          "desc": ""
+        },
+        "hei_bai_statue": {
+          "x": 100,
+          "y": 76,
+          "z": 14,
+          "desc": "Hei Bai, the forest spirit (panda form)"
+        },
+        "acorn_sapling": {
+          "x": 103,
+          "y": 76,
+          "z": 20,
+          "desc": "Aang's acorn: the forest will regrow"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 74,
+        "missing_chunks": 0,
+        "blocks": 246504,
+        "promoted": 74
+      }
+    },
+    {
+      "id": "great_divide",
+      "name": "The Great Divide",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "1x11 The Great Divide"
+      ],
+      "center": {
+        "x": 158,
+        "y": 67,
+        "z": -978
+      },
+      "footprint_radius": 320.0,
+      "bbox": {
+        "min": {
+          "x": -208,
+          "y": 48,
+          "z": -1152
+        },
+        "max": {
+          "x": 527,
+          "y": 175,
+          "z": -817
+        }
+      },
+      "site": {
+        "id": "great_divide",
+        "x": 158,
+        "y": 71,
+        "z": -978,
+        "facing": "east",
+        "fit_radius": 32.2,
+        "strategy": "canyon",
+        "anchor": [
+          159,
+          -974
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 18.0
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.great_divide",
+        "seed": 107836502,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "great_divide.schem",
+            "size": [
+              578,
+              68,
+              216
+            ],
+            "world_origin": [
+              -120,
+              64,
+              -1079
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "canyon 640 long, 128 wide, floor y=66 (rim ~114); terracotta strata",
+        "level pad r=8->14 at y=122"
+      ],
+      "points_of_interest": {
+        "canyon_ranger_station": {
+          "x": -68,
+          "y": 123,
+          "z": -969,
+          "desc": "Canyon guide; Gan Jin & Zhang tribes"
+        },
+        "canyon_floor": {
+          "x": 158,
+          "y": 67,
+          "z": -978,
+          "desc": ""
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 417,
+        "missing_chunks": 0,
+        "blocks": 3901506,
+        "promoted": 417
+      }
+    },
+    {
+      "id": "gaoling",
+      "name": "Gaoling (Beifong Estate & Earth Rumble VI arena)",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "2x06 The Blind Bandit",
+        "3x21 Sozin's Comet (Toph's parents)"
+      ],
+      "center": {
+        "x": 1954,
+        "y": 86,
+        "z": 1098
+      },
+      "footprint_radius": 100.0,
+      "bbox": {
+        "min": {
+          "x": 1808,
+          "y": 32,
+          "z": 960
+        },
+        "max": {
+          "x": 2159,
+          "y": 111,
+          "z": 1215
+        }
+      },
+      "site": {
+        "id": "gaoling",
+        "x": 1954,
+        "y": 86,
+        "z": 1098,
+        "facing": "north",
+        "fit_radius": 154.6,
+        "strategy": "flat",
+        "anchor": [
+          1950,
+          1039
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": -104.7
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.gaoling",
+        "seed": 738690694,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "gaoling.schem",
+            "size": [
+              318,
+              51,
+              212
+            ],
+            "world_origin": [
+              1834,
+              47,
+              985
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=14->22 at y=85",
+        "level pad r=8->13 at y=80",
+        "level pad r=8->13 at y=84",
+        "level pad r=7->12 at y=81",
+        "level pad r=7->12 at y=81",
+        "level pad r=8->13 at y=79",
+        "level pad r=7->12 at y=82",
+        "level pad r=7->12 at y=76",
+        "level pad r=8->13 at y=83",
+        "level pad r=8->13 at y=84",
+        "level pad r=6->11 at y=74",
+        "level pad r=6->11 at y=80",
+        "level pad r=6->11 at y=83",
+        "level pad r=7->12 at y=84",
+        "level pad r=8->13 at y=83",
+        "level pad r=8->13 at y=78",
+        "level pad r=7->12 at y=74",
+        "level pad r=7->12 at y=75",
+        "level pad r=6->11 at y=78",
+        "level pad r=8->13 at y=77",
+        "level pad r=8->13 at y=81",
+        "level pad r=8->13 at y=78",
+        "level pad r=6->11 at y=79",
+        "level pad r=6->11 at y=76",
+        "level pad r=7->12 at y=74",
+        "level pad r=7->12 at y=82",
+        "level pad r=6->11 at y=82",
+        "level pad r=8->13 at y=81",
+        "level pad r=6->11 at y=84",
+        "level pad r=6->11 at y=78",
+        "level pad r=8->13 at y=81",
+        "level pad r=36->50 at y=71"
+      ],
+      "points_of_interest": {
+        "market_square": {
+          "x": 1954,
+          "y": 86,
+          "z": 1098,
+          "desc": ""
+        },
+        "beifong_estate": {
+          "x": 1869,
+          "y": 72,
+          "z": 1015,
+          "desc": "Toph's family estate (flying-boar crest)"
+        },
+        "earth_rumble_arena": {
+          "x": 2062,
+          "y": 52,
+          "z": 1115,
+          "desc": "Earth Rumble VI (The Blind Bandit vs The Boulder)"
+        },
+        "earth_rumble_entrance": {
+          "x": 2149,
+          "y": 77,
+          "z": 1128,
+          "desc": "Hidden cave entrance"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 182,
+        "missing_chunks": 0,
+        "blocks": 228751,
+        "promoted": 182
+      }
+    },
+    {
+      "id": "serpents_pass",
+      "name": "The Serpent's Pass",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "2x12 The Serpent's Pass"
+      ],
+      "center": {
+        "x": 2478,
+        "y": 67,
+        "z": -671
+      },
+      "footprint_radius": 200.0,
+      "bbox": {
+        "min": {
+          "x": 2336,
+          "y": 48,
+          "z": -976
+        },
+        "max": {
+          "x": 2575,
+          "y": 143,
+          "z": -449
+        }
+      },
+      "site": {
+        "id": "serpents_pass",
+        "x": 2462,
+        "y": 67,
+        "z": -719,
+        "facing": "east",
+        "fit_radius": 280.0,
+        "strategy": "path",
+        "anchor": [
+          2462,
+          -719
+        ],
+        "path": [
+          [
+            2542,
+            -463
+          ],
+          [
+            2478,
+            -671
+          ],
+          [
+            2366,
+            -959
+          ]
+        ],
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 0.0
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.serpents_pass",
+        "seed": 184798940,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "serpents_pass.schem",
+            "size": [
+              8,
+              14,
+              16
+            ],
+            "world_origin": [
+              2540,
+              57,
+              -464
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "rock spine raised to y=69; 27-block moats flooded to sea level on both sides"
+      ],
+      "points_of_interest": {
+        "pass_entrance_sign": {
+          "x": 2540,
+          "y": 70,
+          "z": -459,
+          "desc": "'Abandon hope' sign (2x12)"
+        },
+        "serpent_lair": {
+          "x": 2458,
+          "y": 52,
+          "z": -665,
+          "desc": "The serpent (spawn in the moat)"
+        },
+        "pass_north_end": {
+          "x": 2366,
+          "y": 70,
+          "z": -959,
+          "desc": ""
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 150,
+        "missing_chunks": 0,
+        "blocks": 498043,
+        "promoted": 150
+      }
+    },
+    {
+      "id": "ba_sing_se",
+      "name": "Ba Sing Se",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "2x13 The Drill",
+        "2x14 City of Walls and Secrets",
+        "2x15 Tales of Ba Sing Se",
+        "2x16 Appa's Lost Days",
+        "2x17 Lake Laogai",
+        "2x18 The Earth King",
+        "2x20 The Crossroads of Destiny",
+        "3x21 Sozin's Comet (reclaiming)"
+      ],
+      "center": {
+        "x": 2438,
+        "y": 84,
+        "z": -1818
+      },
+      "footprint_radius": 580.0,
+      "bbox": {
+        "min": {
+          "x": 1856,
+          "y": 16,
+          "z": -2336
+        },
+        "max": {
+          "x": 3023,
+          "y": 159,
+          "z": -1297
+        }
+      },
+      "site": {
+        "id": "ba_sing_se",
+        "x": 2438,
+        "y": 78,
+        "z": -1818,
+        "facing": "north",
+        "fit_radius": 294.0,
+        "strategy": "inland_max",
+        "anchor": [
+          2590,
+          -2062
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {
+          "city_base_y": 69
+        },
+        "angle_deg": -58.1
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.basingse.ba_sing_se",
+        "seed": 2017500968,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "ba_sing_se__1863_-2333.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              1863,
+              24,
+              -2333
+            ]
+          },
+          {
+            "file": "ba_sing_se__1863_-2077.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              1863,
+              24,
+              -2077
+            ]
+          },
+          {
+            "file": "ba_sing_se__1863_-1821.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              1863,
+              24,
+              -1821
+            ]
+          },
+          {
+            "file": "ba_sing_se__1863_-1565.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              1863,
+              24,
+              -1565
+            ]
+          },
+          {
+            "file": "ba_sing_se__1863_-1309.schem",
+            "size": [
+              256,
+              130,
+              7
+            ],
+            "world_origin": [
+              1863,
+              24,
+              -1309
+            ]
+          },
+          {
+            "file": "ba_sing_se__2119_-2333.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2119,
+              24,
+              -2333
+            ]
+          },
+          {
+            "file": "ba_sing_se__2119_-2077.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2119,
+              24,
+              -2077
+            ]
+          },
+          {
+            "file": "ba_sing_se__2119_-1821.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2119,
+              24,
+              -1821
+            ]
+          },
+          {
+            "file": "ba_sing_se__2119_-1565.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2119,
+              24,
+              -1565
+            ]
+          },
+          {
+            "file": "ba_sing_se__2119_-1309.schem",
+            "size": [
+              256,
+              130,
+              7
+            ],
+            "world_origin": [
+              2119,
+              24,
+              -1309
+            ]
+          },
+          {
+            "file": "ba_sing_se__2375_-2333.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2375,
+              24,
+              -2333
+            ]
+          },
+          {
+            "file": "ba_sing_se__2375_-2077.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2375,
+              24,
+              -2077
+            ]
+          },
+          {
+            "file": "ba_sing_se__2375_-1821.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2375,
+              24,
+              -1821
+            ]
+          },
+          {
+            "file": "ba_sing_se__2375_-1565.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2375,
+              24,
+              -1565
+            ]
+          },
+          {
+            "file": "ba_sing_se__2375_-1309.schem",
+            "size": [
+              256,
+              130,
+              7
+            ],
+            "world_origin": [
+              2375,
+              24,
+              -1309
+            ]
+          },
+          {
+            "file": "ba_sing_se__2631_-2333.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2631,
+              24,
+              -2333
+            ]
+          },
+          {
+            "file": "ba_sing_se__2631_-2077.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2631,
+              24,
+              -2077
+            ]
+          },
+          {
+            "file": "ba_sing_se__2631_-1821.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2631,
+              24,
+              -1821
+            ]
+          },
+          {
+            "file": "ba_sing_se__2631_-1565.schem",
+            "size": [
+              256,
+              130,
+              256
+            ],
+            "world_origin": [
+              2631,
+              24,
+              -1565
+            ]
+          },
+          {
+            "file": "ba_sing_se__2631_-1309.schem",
+            "size": [
+              256,
+              130,
+              7
+            ],
+            "world_origin": [
+              2631,
+              24,
+              -1309
+            ]
+          },
+          {
+            "file": "ba_sing_se__2887_-2333.schem",
+            "size": [
+              127,
+              130,
+              256
+            ],
+            "world_origin": [
+              2887,
+              24,
+              -2333
+            ]
+          },
+          {
+            "file": "ba_sing_se__2887_-2077.schem",
+            "size": [
+              127,
+              130,
+              256
+            ],
+            "world_origin": [
+              2887,
+              24,
+              -2077
+            ]
+          },
+          {
+            "file": "ba_sing_se__2887_-1821.schem",
+            "size": [
+              127,
+              130,
+              256
+            ],
+            "world_origin": [
+              2887,
+              24,
+              -1821
+            ]
+          },
+          {
+            "file": "ba_sing_se__2887_-1565.schem",
+            "size": [
+              127,
+              130,
+              256
+            ],
+            "world_origin": [
+              2887,
+              24,
+              -1565
+            ]
+          },
+          {
+            "file": "ba_sing_se__2887_-1309.schem",
+            "size": [
+              127,
+              130,
+              7
+            ],
+            "world_origin": [
+              2887,
+              24,
+              -1309
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "city proper flattened into 4 terraces from y=69 (Lower Ring) to y=95 (palace)",
+        "Agrarian Zone cleared and planted: 34x24 plots, irrigation ditches, farm tracks",
+        "Outer Wall: ellipse 1120x1000, top y=127, culverts over rivers"
+      ],
+      "points_of_interest": {
+        "agrarian_zone": {
+          "x": 2858,
+          "y": 70,
+          "z": -1818,
+          "desc": "Farmland between the Outer and Inner Walls"
+        },
+        "outer_wall_south_gate": {
+          "x": 2438,
+          "y": 68,
+          "z": -1318,
+          "desc": "Outer Wall gate"
+        },
+        "outer_wall_north_gate": {
+          "x": 2438,
+          "y": 68,
+          "z": -2318,
+          "desc": "Outer Wall gate"
+        },
+        "outer_wall_east_gate": {
+          "x": 2998,
+          "y": 62,
+          "z": -1818,
+          "desc": "Outer Wall gate"
+        },
+        "outer_wall_west_gate": {
+          "x": 1878,
+          "y": 71,
+          "z": -1818,
+          "desc": "Outer Wall gate"
+        },
+        "drill_breach_site": {
+          "x": 2498,
+          "y": 68,
+          "z": -1318,
+          "desc": "Where the Fire Nation drill struck (2x13)"
+        },
+        "inner_wall_gate": {
+          "x": 2438,
+          "y": 69,
+          "z": -1563,
+          "desc": ""
+        },
+        "middle_ring_wall_gate": {
+          "x": 2438,
+          "y": 70,
+          "z": -1699,
+          "desc": ""
+        },
+        "upper_ring_wall_gate": {
+          "x": 2438,
+          "y": 76,
+          "z": -1789,
+          "desc": ""
+        },
+        "ba_sing_se_university": {
+          "x": 2333,
+          "y": 76,
+          "z": -1858,
+          "desc": "Professor Zei's university"
+        },
+        "jasmine_dragon": {
+          "x": 2500,
+          "y": 84,
+          "z": -1888,
+          "desc": "Iroh's tea shop (Upper Ring)"
+        },
+        "lower_ring_tea_shop": {
+          "x": 2608,
+          "y": 70,
+          "z": -1758,
+          "desc": "Pao's tea shop; Zuko & Iroh's apartment"
+        },
+        "earth_kings_palace": {
+          "x": 2438,
+          "y": 97,
+          "z": -1894,
+          "desc": "Throne room of Earth King Kuei (and Bosco)"
+        },
+        "palace_courtyard": {
+          "x": 2438,
+          "y": 96,
+          "z": -1884,
+          "desc": ""
+        },
+        "monorail_station_south": {
+          "x": 2438,
+          "y": 94,
+          "z": -1340,
+          "desc": "Monorail across the Agrarian Zone"
+        },
+        "monorail_station_north": {
+          "x": 2438,
+          "y": 94,
+          "z": -2296,
+          "desc": "Monorail across the Agrarian Zone"
+        },
+        "monorail_station_east": {
+          "x": 2976,
+          "y": 94,
+          "z": -1818,
+          "desc": "Monorail across the Agrarian Zone"
+        },
+        "monorail_station_west": {
+          "x": 1900,
+          "y": 94,
+          "z": -1818,
+          "desc": "Monorail across the Agrarian Zone"
+        },
+        "dai_li_headquarters": {
+          "x": 2686,
+          "y": 26,
+          "z": -1476,
+          "desc": "Long Feng's Dai Li base under Lake Laogai (2x17)"
+        },
+        "laogai_prison_cells": {
+          "x": 2712,
+          "y": 26,
+          "z": -1476,
+          "desc": ""
+        },
+        "brainwashing_chamber": {
+          "x": 2674,
+          "y": 26,
+          "z": -1470,
+          "desc": "Where Jet was brainwashed"
+        },
+        "lake_laogai_entrance": {
+          "x": 2677,
+          "y": 63,
+          "z": -1481,
+          "desc": "Hidden hatch on the lakeshore"
+        },
+        "lake_laogai": {
+          "x": 2686,
+          "y": 62,
+          "z": -1476,
+          "desc": ""
+        },
+        "lower_ring": {
+          "x": 2438,
+          "y": 70,
+          "z": -1628,
+          "desc": "Lower Ring (refugees, Zuko & Iroh)"
+        },
+        "middle_ring": {
+          "x": 2378,
+          "y": 76,
+          "z": -1858,
+          "desc": ""
+        },
+        "upper_ring": {
+          "x": 2478,
+          "y": 84,
+          "z": -1888,
+          "desc": ""
+        }
+      },
+      "notes": [
+        "433 city buildings across the Lower/Middle/Upper Rings",
+        "Lake Laogai uses the natural lake inside the Agrarian Zone"
+      ],
+      "write_stats": {
+        "chunks": 3676,
+        "missing_chunks": 0,
+        "blocks": 8529993,
+        "promoted": 3676
+      }
+    },
+    {
+      "id": "full_moon_bay",
+      "name": "Full Moon Bay (hidden ferry station)",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "2x12 The Serpent's Pass"
+      ],
+      "center": {
+        "x": 2624,
+        "y": 66,
+        "z": -334
+      },
+      "footprint_radius": 60.0,
+      "bbox": {
+        "min": {
+          "x": 2560,
+          "y": 48,
+          "z": -384
+        },
+        "max": {
+          "x": 2703,
+          "y": 111,
+          "z": -273
+        }
+      },
+      "site": {
+        "id": "full_moon_bay",
+        "x": 2654,
+        "y": 61,
+        "z": -334,
+        "facing": "east",
+        "fit_radius": 4.0,
+        "strategy": "coast",
+        "anchor": [
+          2654,
+          -335
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 24.0
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.full_moon_bay",
+        "seed": 2105429233,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "full_moon_bay.schem",
+            "size": [
+              122,
+              38,
+              97
+            ],
+            "world_origin": [
+              2573,
+              54,
+              -381
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=34->48 at y=65"
+      ],
+      "points_of_interest": {
+        "ferry_terminal": {
+          "x": 2616,
+          "y": 66,
+          "z": -334,
+          "desc": "Tickets & passports for Ba Sing Se"
+        },
+        "passport_office": {
+          "x": 2624,
+          "y": 66,
+          "z": -356,
+          "desc": ""
+        },
+        "ferry_dock": {
+          "x": 2684,
+          "y": 64,
+          "z": -334,
+          "desc": "Ferries across the lake to Ba Sing Se"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 46,
+        "missing_chunks": 0,
+        "blocks": 89220,
+        "promoted": 46
+      }
+    },
+    {
+      "id": "wan_shi_tong_library",
+      "name": "Wan Shi Tong's Library (Si Wong Desert)",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "2x10 The Library"
+      ],
+      "center": {
+        "x": 1786,
+        "y": 79,
+        "z": 158
+      },
+      "footprint_radius": 60.0,
+      "bbox": {
+        "min": {
+          "x": 1728,
+          "y": -16,
+          "z": 112
+        },
+        "max": {
+          "x": 1839,
+          "y": 143,
+          "z": 207
+        }
+      },
+      "site": {
+        "id": "wan_shi_tong_library",
+        "x": 1786,
+        "y": 79,
+        "z": 158,
+        "facing": "north",
+        "fit_radius": 574.2,
+        "strategy": "desert",
+        "anchor": [
+          1790,
+          144
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {
+          "sand_fraction": 1.0
+        },
+        "angle_deg": -134.2
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.wan_shi_tong_library",
+        "seed": 1098048057,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "wan_shi_tong_library.schem",
+            "size": [
+              101,
+              136,
+              77
+            ],
+            "world_origin": [
+              1736,
+              -6,
+              120
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [],
+      "points_of_interest": {
+        "main_atrium": {
+          "x": 1786,
+          "y": 10,
+          "z": 158,
+          "desc": "Wan Shi Tong's collection"
+        },
+        "planetarium": {
+          "x": 1820,
+          "y": 10,
+          "z": 158,
+          "desc": "Solar-eclipse date revealed (Day of Black Sun)"
+        },
+        "library_tower_top": {
+          "x": 1786,
+          "y": 109,
+          "z": 158,
+          "desc": "Only the spire shows above the dunes"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 42,
+        "missing_chunks": 0,
+        "blocks": 518640,
+        "promoted": 42
+      }
+    },
+    {
+      "id": "misty_palms_oasis",
+      "name": "Misty Palms Oasis (Si Wong Desert)",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "2x10 The Library",
+        "2x11 The Desert"
+      ],
+      "center": {
+        "x": 1146,
+        "y": 67,
+        "z": 222
+      },
+      "footprint_radius": 55.0,
+      "bbox": {
+        "min": {
+          "x": 1088,
+          "y": 48,
+          "z": 160
+        },
+        "max": {
+          "x": 1215,
+          "y": 79,
+          "z": 271
+        }
+      },
+      "site": {
+        "id": "misty_palms_oasis",
+        "x": 1146,
+        "y": 66,
+        "z": 222,
+        "facing": "south",
+        "fit_radius": 36.0,
+        "strategy": "flat",
+        "anchor": [
+          1151,
+          256
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 77.4
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.misty_palms_oasis",
+        "seed": 15272450,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "misty_palms_oasis.schem",
+            "size": [
+              102,
+              16,
+              88
+            ],
+            "world_origin": [
+              1095,
+              62,
+              167
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=20->34 at y=66",
+        "level pad r=6->11 at y=65",
+        "level pad r=8->13 at y=66",
+        "level pad r=6->11 at y=66",
+        "level pad r=7->12 at y=66",
+        "level pad r=7->12 at y=66",
+        "level pad r=8->13 at y=66",
+        "level pad r=7->12 at y=66",
+        "level pad r=6->11 at y=68",
+        "level pad r=7->12 at y=68"
+      ],
+      "points_of_interest": {
+        "oasis_pool": {
+          "x": 1146,
+          "y": 66,
+          "z": 222,
+          "desc": "Misty Palms Oasis"
+        },
+        "misty_palms_inn": {
+          "x": 1192,
+          "y": 67,
+          "z": 238,
+          "desc": "Where the group met Professor Zei"
+        },
+        "sand_sailer": {
+          "x": 1174,
+          "y": 68,
+          "z": 168,
+          "desc": "Sandbender sailer"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 45,
+        "missing_chunks": 0,
+        "blocks": 38598,
+        "promoted": 45
+      }
+    },
+    {
+      "id": "si_wong_rock",
+      "name": "Si Wong Desert rock (where Appa was taken)",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "2x11 The Desert",
+        "2x16 Appa's Lost Days"
+      ],
+      "center": {
+        "x": 1622,
+        "y": 72,
+        "z": -254
+      },
+      "footprint_radius": 45.0,
+      "bbox": {
+        "min": {
+          "x": 1584,
+          "y": 48,
+          "z": -288
+        },
+        "max": {
+          "x": 1663,
+          "y": 111,
+          "z": -225
+        }
+      },
+      "site": {
+        "id": "si_wong_rock",
+        "x": 1622,
+        "y": 70,
+        "z": -254,
+        "facing": "north",
+        "fit_radius": 276.8,
+        "strategy": "desert",
+        "anchor": [
+          1630,
+          -303
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {
+          "sand_fraction": 1.0
+        },
+        "angle_deg": -127.4
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.si_wong_rock",
+        "seed": 1861849746,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "si_wong_rock.schem",
+            "size": [
+              63,
+              41,
+              46
+            ],
+            "world_origin": [
+              1592,
+              58,
+              -276
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [],
+      "points_of_interest": {
+        "rock_shelter": {
+          "x": 1622,
+          "y": 70,
+          "z": -240,
+          "desc": "Appa was taken by sandbenders here"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 16,
+        "missing_chunks": 0,
+        "blocks": 42059,
+        "promoted": 16
+      }
+    },
+    {
+      "id": "wulong_forest",
+      "name": "Wulong Forest (rock pillars of the final battle)",
+      "nation": "earth",
+      "story_tier": 3,
+      "episodes": [
+        "3x20 Sozin's Comet, Part 3: Into the Inferno",
+        "3x21 Sozin's Comet, Part 4: Avatar Aang"
+      ],
+      "center": {
+        "x": -54,
+        "y": 81,
+        "z": -202
+      },
+      "footprint_radius": 171.0,
+      "bbox": {
+        "min": {
+          "x": -240,
+          "y": 64,
+          "z": -368
+        },
+        "max": {
+          "x": 127,
+          "y": 271,
+          "z": -17
+        }
+      },
+      "site": {
+        "id": "wulong_forest",
+        "x": -54,
+        "y": 80,
+        "z": -202,
+        "facing": "south",
+        "fit_radius": 171.2,
+        "strategy": "flat",
+        "anchor": [
+          -191,
+          -335
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 54.2
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.earth.wulong_forest",
+        "seed": 502807095,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "wulong_forest.schem",
+            "size": [
+              353,
+              194,
+              331
+            ],
+            "world_origin": [
+              -234,
+              64,
+              -361
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [],
+      "points_of_interest": {
+        "final_battle_pillar": {
+          "x": -138,
+          "y": 248,
+          "z": -348,
+          "desc": "Aang vs. Fire Lord Ozai; Avatar State unlocked on the rock"
+        },
+        "forest_center": {
+          "x": -54,
+          "y": 81,
+          "z": -202,
+          "desc": "Ozai's airship fleet flies over Wulong"
+        }
+      },
+      "notes": [
+        "60 karst pillars within r=171."
+      ],
+      "write_stats": {
+        "chunks": 256,
+        "missing_chunks": 0,
+        "blocks": 891149,
+        "promoted": 256
+      }
+    },
+    {
+      "id": "crescent_island",
+      "name": "Crescent Island Fire Temple (Avatar Roku's temple)",
+      "nation": "fire",
+      "story_tier": 4,
+      "episodes": [
+        "1x08 Avatar Roku (Winter Solstice, Part 2)"
+      ],
+      "center": {
+        "x": -1670,
+        "y": 145,
+        "z": -34
+      },
+      "footprint_radius": 70.0,
+      "bbox": {
+        "min": {
+          "x": -1728,
+          "y": 64,
+          "z": -96
+        },
+        "max": {
+          "x": -1601,
+          "y": 223,
+          "z": 15
+        }
+      },
+      "site": {
+        "id": "crescent_island",
+        "x": -1670,
+        "y": 149,
+        "z": -34,
+        "facing": "west",
+        "fit_radius": 81.0,
+        "strategy": "island",
+        "anchor": [
+          -1646,
+          -31
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {
+          "island_area_blocks": 38752
+        },
+        "angle_deg": -144.1
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.fire.crescent_island",
+        "seed": 1961290611,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "crescent_island.schem",
+            "size": [
+              87,
+              93,
+              69
+            ],
+            "world_origin": [
+              -1690,
+              124,
+              -82
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=30->46 at y=144"
+      ],
+      "points_of_interest": {
+        "roku_sanctuary": {
+          "x": -1673,
+          "y": 149,
+          "z": -34,
+          "desc": "Avatar Roku's statue (winter solstice)"
+        },
+        "fire_temple_entrance": {
+          "x": -1685,
+          "y": 148,
+          "z": -34,
+          "desc": ""
+        },
+        "crescent_volcano": {
+          "x": -1620,
+          "y": 142,
+          "z": -66,
+          "desc": "Erupting volcano (Roku's escape)"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 42,
+        "missing_chunks": 0,
+        "blocks": 226596,
+        "promoted": 42
+      }
+    },
+    {
+      "id": "sun_warriors",
+      "name": "The Sun Warriors' Ancient City (ruins)",
+      "nation": "fire",
+      "story_tier": 4,
+      "episodes": [
+        "3x13 The Firebending Masters"
+      ],
+      "center": {
+        "x": -4222,
+        "y": 78,
+        "z": 250
+      },
+      "footprint_radius": 150.0,
+      "bbox": {
+        "min": {
+          "x": -4384,
+          "y": 48,
+          "z": 80
+        },
+        "max": {
+          "x": -4065,
+          "y": 207,
+          "z": 399
+        }
+      },
+      "site": {
+        "id": "sun_warriors",
+        "x": -4222,
+        "y": 78,
+        "z": 250,
+        "facing": "west",
+        "fit_radius": 84.1,
+        "strategy": "flat",
+        "anchor": [
+          -4333,
+          240
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": 174.2
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.fire.sun_warriors",
+        "seed": 733929703,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "sun_warriors.schem",
+            "size": [
+              297,
+              143,
+              308
+            ],
+            "world_origin": [
+              -4369,
+              52,
+              88
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "level pad r=50->80 at y=77"
+      ],
+      "points_of_interest": {
+        "sun_stone_chamber": {
+          "x": -4222,
+          "y": 110,
+          "z": 250,
+          "desc": "The Sun Stone (source of the Sun Warriors' fire)"
+        },
+        "dancing_dragon_plaza": {
+          "x": -4222,
+          "y": 78,
+          "z": 320,
+          "desc": "The Dancing Dragon form"
+        },
+        "eternal_flame": {
+          "x": -4222,
+          "y": 84,
+          "z": 190,
+          "desc": "The Eternal Flame (first fire from the dragons)"
+        },
+        "dragon_masters_cave": {
+          "x": -4222,
+          "y": 176,
+          "z": 120,
+          "desc": "Ran & Shaw emerge here"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 184,
+        "missing_chunks": 0,
+        "blocks": 740853,
+        "promoted": 184
+      }
+    },
+    {
+      "id": "boiling_rock",
+      "name": "The Boiling Rock",
+      "nation": "fire",
+      "story_tier": 4,
+      "episodes": [
+        "3x14 The Boiling Rock, Part 1",
+        "3x15 The Boiling Rock, Part 2"
+      ],
+      "center": {
+        "x": -3018,
+        "y": 75,
+        "z": -1070
+      },
+      "footprint_radius": 170.0,
+      "bbox": {
+        "min": {
+          "x": -3216,
+          "y": -64,
+          "z": -1264
+        },
+        "max": {
+          "x": -2833,
+          "y": 127,
+          "z": -881
+        }
+      },
+      "site": {
+        "id": "boiling_rock",
+        "x": -3018,
+        "y": -20,
+        "z": -1070,
+        "facing": "east",
+        "fit_radius": 362.7,
+        "strategy": "sea",
+        "anchor": [
+          -3437,
+          -767
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {
+          "open_water_radius": 362.7450895601483
+        },
+        "angle_deg": 0.0
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.fire.boiling_rock",
+        "seed": 1235437101,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "boiling_rock.schem",
+            "size": [
+              175,
+              69,
+              175
+            ],
+            "world_origin": [
+              -3105,
+              54,
+              -1157
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "volcanic crater island raised from the sea floor (rim y=114); magma-floored boiling lake with bubble columns"
+      ],
+      "points_of_interest": {
+        "cell_block": {
+          "x": -3018,
+          "y": 75,
+          "z": -1070,
+          "desc": "Sokka & Zuko's cells"
+        },
+        "the_cooler": {
+          "x": -3005,
+          "y": 76,
+          "z": -1055,
+          "desc": ""
+        },
+        "warden_tower": {
+          "x": -3030,
+          "y": 75,
+          "z": -1056,
+          "desc": "The Warden"
+        },
+        "gondola": {
+          "x": -3059,
+          "y": 106,
+          "z": -1022,
+          "desc": "Escape route over the boiling lake"
+        },
+        "gondola_rim_station": {
+          "x": -3088,
+          "y": 115,
+          "z": -988,
+          "desc": ""
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 463,
+        "missing_chunks": 0,
+        "blocks": 10178132,
+        "promoted": 463
+      }
+    },
+    {
+      "id": "ember_island",
+      "name": "Ember Island (beach, royal beach house & Ember Island Players theater)",
+      "nation": "fire",
+      "story_tier": 4,
+      "episodes": [
+        "3x05 The Beach",
+        "3x17 The Ember Island Players",
+        "3x18 Sozin's Comet, Part 1"
+      ],
+      "center": {
+        "x": -2258,
+        "y": 75,
+        "z": 38
+      },
+      "footprint_radius": 110.0,
+      "bbox": {
+        "min": {
+          "x": -2368,
+          "y": 32,
+          "z": -64
+        },
+        "max": {
+          "x": -2161,
+          "y": 143,
+          "z": 127
+        }
+      },
+      "site": {
+        "id": "ember_island",
+        "x": -2126,
+        "y": 176,
+        "z": 114,
+        "facing": "west",
+        "fit_radius": 144.2,
+        "strategy": "island",
+        "anchor": [
+          -2062,
+          112
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {
+          "island_area_blocks": 98976
+        },
+        "angle_deg": 165.8
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.fire.ember_island",
+        "seed": 1523362267,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "ember_island.schem",
+            "size": [
+              143,
+              47,
+              130
+            ],
+            "world_origin": [
+              -2315,
+              62,
+              -10
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "sand beach shaped along the shore facing the sea",
+        "level pad r=26->36 at y=70",
+        "level pad r=22->32 at y=62",
+        "level pad r=7->12 at y=70",
+        "level pad r=7->12 at y=64",
+        "level pad r=6->11 at y=79",
+        "level pad r=7->12 at y=64",
+        "level pad r=6->11 at y=64",
+        "level pad r=6->11 at y=73",
+        "level pad r=6->11 at y=77",
+        "level pad r=6->11 at y=64",
+        "level pad r=6->11 at y=99",
+        "level pad r=6->11 at y=75"
+      ],
+      "points_of_interest": {
+        "ember_island_beach": {
+          "x": -2307,
+          "y": 64,
+          "z": -11,
+          "desc": "3x05 The Beach"
+        },
+        "ember_island_theater": {
+          "x": -2229,
+          "y": 71,
+          "z": 9,
+          "desc": "The Ember Island Players (3x17)"
+        },
+        "royal_beach_house": {
+          "x": -2296,
+          "y": 63,
+          "z": 67,
+          "desc": "Fire Lord's family beach house"
+        },
+        "resort_town": {
+          "x": -2258,
+          "y": 74,
+          "z": 38,
+          "desc": ""
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 91,
+        "missing_chunks": 0,
+        "blocks": 269603,
+        "promoted": 91
+      }
+    },
+    {
+      "id": "fire_nation_capital",
+      "name": "Fire Nation Capital (Royal Caldera, Palace & Royal Plaza)",
+      "nation": "fire",
+      "story_tier": 4,
+      "episodes": [
+        "3x01 The Awakening",
+        "3x10 Day of Black Sun, Part 1",
+        "3x11 Day of Black Sun, Part 2",
+        "3x19 Sozin's Comet, Part 2",
+        "3x21 Sozin's Comet, Part 4"
+      ],
+      "center": {
+        "x": -4010,
+        "y": 163,
+        "z": -294
+      },
+      "footprint_radius": 295.0,
+      "bbox": {
+        "min": {
+          "x": -4304,
+          "y": 48,
+          "z": -704
+        },
+        "max": {
+          "x": -3713,
+          "y": 287,
+          "z": 15
+        }
+      },
+      "site": {
+        "id": "fire_nation_capital",
+        "x": -4010,
+        "y": 265,
+        "z": -294,
+        "facing": "east",
+        "fit_radius": 172.2,
+        "strategy": "peak",
+        "anchor": [
+          -3965,
+          -239
+        ],
+        "path": null,
+        "sea_level": 62,
+        "notes": {},
+        "angle_deg": -30.7
+      },
+      "scale": 1.0,
+      "schematic": {
+        "type": "procedural",
+        "generator": "atla_builder.structures.fire.fire_nation_capital",
+        "seed": 66401780,
+        "version": "1.0.0",
+        "files": [
+          {
+            "file": "fire_nation_capital.schem",
+            "size": [
+              444,
+              180,
+              623
+            ],
+            "world_origin": [
+              -4231,
+              62,
+              -694
+            ]
+          }
+        ]
+      },
+      "terrain_integration": [
+        "volcano summit hollowed into the Royal Caldera: floor y=162, rim y=224, floor r=150, rim r=225; 5 residential terraces on the inner slope",
+        "level pad r=6->11 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=8->13 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=6->11 at y=162",
+        "level pad r=7->12 at y=162",
+        "level pad r=8->13 at y=64",
+        "level pad r=8->13 at y=66",
+        "level pad r=7->12 at y=67",
+        "level pad r=8->13 at y=67",
+        "level pad r=7->12 at y=72",
+        "level pad r=6->11 at y=64",
+        "level pad r=6->11 at y=65",
+        "level pad r=8->13 at y=76",
+        "level pad r=6->11 at y=66",
+        "level pad r=8->13 at y=81",
+        "level pad r=8->13 at y=64",
+        "level pad r=7->12 at y=78",
+        "level pad r=6->11 at y=66",
+        "level pad r=6->11 at y=74",
+        "level pad r=6->11 at y=73",
+        "level pad r=6->11 at y=66",
+        "level pad r=6->11 at y=74",
+        "level pad r=6->11 at y=64",
+        "level pad r=6->11 at y=71",
+        "level pad r=6->11 at y=66"
+      ],
+      "points_of_interest": {
+        "fire_lord_palace": {
+          "x": -4010,
+          "y": 171,
+          "z": -357,
+          "desc": "Throne room with the wall of fire"
+        },
+        "war_room": {
+          "x": -3990,
+          "y": 171,
+          "z": -364,
+          "desc": "Zuko's war meeting (1x12 flashback)"
+        },
+        "royal_plaza": {
+          "x": -4010,
+          "y": 163,
+          "z": -254,
+          "desc": "Royal Plaza (Day of Black Sun)"
+        },
+        "agni_kai_arena": {
+          "x": -4090,
+          "y": 163,
+          "z": -259,
+          "desc": "Zuko vs. Ozai (flashback), Zuko vs. Azula (3x21)"
+        },
+        "harbor_city": {
+          "x": -3906,
+          "y": 66,
+          "z": -659,
+          "desc": "Harbor City below the Royal Caldera"
+        },
+        "caldera_gate": {
+          "x": -4010,
+          "y": 225,
+          "z": -519,
+          "desc": "Main gate through the caldera rim"
+        }
+      },
+      "notes": [],
+      "write_stats": {
+        "chunks": 1184,
+        "missing_chunks": 0,
+        "blocks": 16482659,
+        "promoted": 1184
+      }
+    }
+  ],
+  "settlements": [
+    {
+      "id": "earth_watchtower_post_000",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": 3165,
+        "y": 68,
+        "z": -1097
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_market_village_001",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": 1551,
+        "y": 71,
+        "z": 1375
+      },
+      "buildings": 12,
+      "pois": {
+        "well": {
+          "x": 1551,
+          "y": 71,
+          "z": 1375
+        }
+      }
+    },
+    {
+      "id": "earth_market_village_002",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": 856,
+        "y": 71,
+        "z": 463
+      },
+      "buildings": 11,
+      "pois": {
+        "well": {
+          "x": 856,
+          "y": 71,
+          "z": 463
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_003",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 525,
+        "y": 112,
+        "z": -677
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 525,
+          "y": 112,
+          "z": -677
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_004",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -917,
+        "y": 94,
+        "z": 2958
+      },
+      "buildings": 5,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_005",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2587,
+        "y": 70,
+        "z": -1004
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 2587,
+          "y": 70,
+          "z": -1004
+        }
+      }
+    },
+    {
+      "id": "air_air_shrine_006",
+      "kind": "air_shrine",
+      "nation": "air",
+      "center": {
+        "x": 3660,
+        "y": 73,
+        "z": 1432
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_007",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3880,
+        "y": 67,
+        "z": 93
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 3880,
+          "y": 67,
+          "z": 93
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_008",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 345,
+        "y": 88,
+        "z": -470
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 345,
+          "y": 88,
+          "z": -470
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_009",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -248,
+        "y": 66,
+        "z": 3026
+      },
+      "buildings": 5,
+      "pois": {}
+    },
+    {
+      "id": "earth_watchtower_post_010",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": -227,
+        "y": 83,
+        "z": -1271
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_011",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 98,
+        "y": 79,
+        "z": -1553
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 98,
+          "y": 79,
+          "z": -1553
+        }
+      }
+    },
+    {
+      "id": "fire_fire_village_012",
+      "kind": "fire_village",
+      "nation": "fire",
+      "center": {
+        "x": -3103,
+        "y": 69,
+        "z": 787
+      },
+      "buildings": 6,
+      "pois": {
+        "shrine": {
+          "x": -3103,
+          "y": 69,
+          "z": 787
+        }
+      }
+    },
+    {
+      "id": "earth_watchtower_post_013",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": 3111,
+        "y": 68,
+        "z": -1509
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_014",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1706,
+        "y": 72,
+        "z": -1907
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 1706,
+          "y": 72,
+          "z": -1907
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_015",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": 79,
+        "y": 96,
+        "z": -3063
+      },
+      "buildings": 5,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_016",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": -1112,
+        "y": 69,
+        "z": -1896
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": -1112,
+          "y": 69,
+          "z": -1896
+        }
+      }
+    },
+    {
+      "id": "fire_fire_village_017",
+      "kind": "fire_village",
+      "nation": "fire",
+      "center": {
+        "x": -4317,
+        "y": 84,
+        "z": -37
+      },
+      "buildings": 7,
+      "pois": {
+        "shrine": {
+          "x": -4317,
+          "y": 84,
+          "z": -37
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_018",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -1050,
+        "y": 68,
+        "z": 3424
+      },
+      "buildings": 6,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_019",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3882,
+        "y": 77,
+        "z": -151
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 3882,
+          "y": 77,
+          "z": -151
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_020",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": 411,
+        "y": 66,
+        "z": -3366
+      },
+      "buildings": 6,
+      "pois": {}
+    },
+    {
+      "id": "earth_watchtower_post_021",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": 3447,
+        "y": 71,
+        "z": -337
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "water_igloo_camp_022",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -282,
+        "y": 66,
+        "z": -3669
+      },
+      "buildings": 6,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_023",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": -1812,
+        "y": 82,
+        "z": -1848
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": -1812,
+          "y": 82,
+          "z": -1848
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_024",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": 398,
+        "y": 88,
+        "z": 3254
+      },
+      "buildings": 5,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_025",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3408,
+        "y": 72,
+        "z": -980
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 3408,
+          "y": 72,
+          "z": -980
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_026",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1318,
+        "y": 79,
+        "z": 1227
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 1318,
+          "y": 79,
+          "z": 1227
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_027",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3930,
+        "y": 70,
+        "z": -537
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 3930,
+          "y": 70,
+          "z": -537
+        }
+      }
+    },
+    {
+      "id": "earth_market_village_028",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": -373,
+        "y": 90,
+        "z": -1683
+      },
+      "buildings": 10,
+      "pois": {
+        "well": {
+          "x": -373,
+          "y": 90,
+          "z": -1683
+        }
+      }
+    },
+    {
+      "id": "earth_market_village_029",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": -1312,
+        "y": 91,
+        "z": -2147
+      },
+      "buildings": 10,
+      "pois": {
+        "well": {
+          "x": -1312,
+          "y": 91,
+          "z": -2147
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_030",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": -94,
+        "y": 68,
+        "z": -1903
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": -94,
+          "y": 68,
+          "z": -1903
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_031",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 4251,
+        "y": 76,
+        "z": -520
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 4251,
+          "y": 76,
+          "z": -520
+        }
+      }
+    },
+    {
+      "id": "earth_market_village_032",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": 3747,
+        "y": 71,
+        "z": -1175
+      },
+      "buildings": 10,
+      "pois": {
+        "well": {
+          "x": 3747,
+          "y": 71,
+          "z": -1175
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_033",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": 1379,
+        "y": 79,
+        "z": -2608
+      },
+      "buildings": 5,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_034",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2934,
+        "y": 70,
+        "z": -866
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 2934,
+          "y": 70,
+          "z": -866
+        }
+      }
+    },
+    {
+      "id": "fire_fire_outpost_035",
+      "kind": "fire_outpost",
+      "nation": "fire",
+      "center": {
+        "x": -3298,
+        "y": 71,
+        "z": 723
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_036",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1327,
+        "y": 75,
+        "z": 1526
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 1327,
+          "y": 75,
+          "z": 1526
+        }
+      }
+    },
+    {
+      "id": "earth_watchtower_post_037",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": 2740,
+        "y": 80,
+        "z": 464
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_market_village_038",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": 1189,
+        "y": 71,
+        "z": 997
+      },
+      "buildings": 10,
+      "pois": {
+        "well": {
+          "x": 1189,
+          "y": 71,
+          "z": 997
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_039",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": -406,
+        "y": 69,
+        "z": -1964
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": -406,
+          "y": 69,
+          "z": -1964
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_040",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": -1356,
+        "y": 92,
+        "z": -1774
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": -1356,
+          "y": 92,
+          "z": -1774
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_041",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2273,
+        "y": 85,
+        "z": 1040
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 2273,
+          "y": 85,
+          "z": 1040
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_042",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -587,
+        "y": 66,
+        "z": -3565
+      },
+      "buildings": 6,
+      "pois": {}
+    },
+    {
+      "id": "water_igloo_camp_043",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -652,
+        "y": 65,
+        "z": -3146
+      },
+      "buildings": 5,
+      "pois": {}
+    },
+    {
+      "id": "earth_watchtower_post_044",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": -887,
+        "y": 83,
+        "z": -1269
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_market_village_045",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": 864,
+        "y": 75,
+        "z": 990
+      },
+      "buildings": 11,
+      "pois": {
+        "well": {
+          "x": 864,
+          "y": 75,
+          "z": 990
+        }
+      }
+    },
+    {
+      "id": "earth_market_village_046",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": -1935,
+        "y": 94,
+        "z": -2079
+      },
+      "buildings": 8,
+      "pois": {
+        "well": {
+          "x": -1935,
+          "y": 94,
+          "z": -2079
+        }
+      }
+    },
+    {
+      "id": "air_air_shrine_047",
+      "kind": "air_shrine",
+      "nation": "air",
+      "center": {
+        "x": 3020,
+        "y": 72,
+        "z": 1226
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_048",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1832,
+        "y": 80,
+        "z": -2452
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 1832,
+          "y": 80,
+          "z": -2452
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_049",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3255,
+        "y": 72,
+        "z": 289
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 3255,
+          "y": 72,
+          "z": 289
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_050",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1393,
+        "y": 67,
+        "z": -1899
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 1393,
+          "y": 67,
+          "z": -1899
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_051",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": -375,
+        "y": 82,
+        "z": -224
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": -375,
+          "y": 82,
+          "z": -224
+        }
+      }
+    },
+    {
+      "id": "earth_watchtower_post_052",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": 884,
+        "y": 93,
+        "z": -876
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_053",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3480,
+        "y": 83,
+        "z": -1365
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 3480,
+          "y": 83,
+          "z": -1365
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_054",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 489,
+        "y": 78,
+        "z": -1747
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 489,
+          "y": 78,
+          "z": -1747
+        }
+      }
+    },
+    {
+      "id": "fire_fire_outpost_055",
+      "kind": "fire_outpost",
+      "nation": "fire",
+      "center": {
+        "x": -2094,
+        "y": 67,
+        "z": -981
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "fire_fire_village_056",
+      "kind": "fire_village",
+      "nation": "fire",
+      "center": {
+        "x": -3625,
+        "y": 72,
+        "z": -175
+      },
+      "buildings": 6,
+      "pois": {
+        "shrine": {
+          "x": -3625,
+          "y": 72,
+          "z": -175
+        }
+      }
+    },
+    {
+      "id": "earth_market_village_057",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": 3349,
+        "y": 70,
+        "z": -1700
+      },
+      "buildings": 12,
+      "pois": {
+        "well": {
+          "x": 3349,
+          "y": 70,
+          "z": -1700
+        }
+      }
+    },
+    {
+      "id": "earth_market_village_058",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": 298,
+        "y": 79,
+        "z": 983
+      },
+      "buildings": 12,
+      "pois": {
+        "well": {
+          "x": 298,
+          "y": 79,
+          "z": 983
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_059",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 4112,
+        "y": 69,
+        "z": -36
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 4112,
+          "y": 69,
+          "z": -36
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_060",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1099,
+        "y": 93,
+        "z": -2411
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 1099,
+          "y": 93,
+          "z": -2411
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_061",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -792,
+        "y": 75,
+        "z": 3249
+      },
+      "buildings": 6,
+      "pois": {}
+    },
+    {
+      "id": "earth_market_village_062",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": 408,
+        "y": 74,
+        "z": 161
+      },
+      "buildings": 12,
+      "pois": {
+        "well": {
+          "x": 408,
+          "y": 74,
+          "z": 161
+        }
+      }
+    },
+    {
+      "id": "earth_watchtower_post_063",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": 567,
+        "y": 70,
+        "z": -328
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_064",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1074,
+        "y": 82,
+        "z": -672
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 1074,
+          "y": 82,
+          "z": -672
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_065",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2294,
+        "y": 74,
+        "z": 1783
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 2294,
+          "y": 74,
+          "z": 1783
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_066",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1245,
+        "y": 68,
+        "z": -1647
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 1245,
+          "y": 68,
+          "z": -1647
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_067",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 525,
+        "y": 73,
+        "z": -1356
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 525,
+          "y": 73,
+          "z": -1356
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_068",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3827,
+        "y": 76,
+        "z": -760
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 3827,
+          "y": 76,
+          "z": -760
+        }
+      }
+    },
+    {
+      "id": "fire_fire_village_069",
+      "kind": "fire_village",
+      "nation": "fire",
+      "center": {
+        "x": -3569,
+        "y": 93,
+        "z": -401
+      },
+      "buildings": 6,
+      "pois": {
+        "shrine": {
+          "x": -3569,
+          "y": 93,
+          "z": -401
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_070",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1493,
+        "y": 71,
+        "z": 1960
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 1493,
+          "y": 71,
+          "z": 1960
+        }
+      }
+    },
+    {
+      "id": "air_air_shrine_071",
+      "kind": "air_shrine",
+      "nation": "air",
+      "center": {
+        "x": 3093,
+        "y": 69,
+        "z": 1770
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "fire_fire_outpost_072",
+      "kind": "fire_outpost",
+      "nation": "fire",
+      "center": {
+        "x": -3164,
+        "y": 75,
+        "z": -171
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_073",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 544,
+        "y": 68,
+        "z": 1052
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 544,
+          "y": 68,
+          "z": 1052
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_074",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": -751,
+        "y": 72,
+        "z": -1501
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": -751,
+          "y": 72,
+          "z": -1501
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_075",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2082,
+        "y": 72,
+        "z": -2415
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 2082,
+          "y": 72,
+          "z": -2415
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_076",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2890,
+        "y": 71,
+        "z": 137
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 2890,
+          "y": 71,
+          "z": 137
+        }
+      }
+    },
+    {
+      "id": "fire_fire_outpost_077",
+      "kind": "fire_outpost",
+      "nation": "fire",
+      "center": {
+        "x": -2975,
+        "y": 71,
+        "z": 431
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_078",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2586,
+        "y": 71,
+        "z": -115
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 2586,
+          "y": 71,
+          "z": -115
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_079",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 345,
+        "y": 71,
+        "z": -1527
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 345,
+          "y": 71,
+          "z": -1527
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_080",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1585,
+        "y": 72,
+        "z": -2333
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 1585,
+          "y": 72,
+          "z": -2333
+        }
+      }
+    },
+    {
+      "id": "earth_watchtower_post_081",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": 778,
+        "y": 74,
+        "z": -1553
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_082",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1802,
+        "y": 67,
+        "z": 1265
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 1802,
+          "y": 67,
+          "z": 1265
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_083",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2975,
+        "y": 71,
+        "z": 399
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 2975,
+          "y": 71,
+          "z": 399
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_084",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": 36,
+        "y": 69,
+        "z": 3568
+      },
+      "buildings": 3,
+      "pois": {}
+    },
+    {
+      "id": "fire_fire_outpost_085",
+      "kind": "fire_outpost",
+      "nation": "fire",
+      "center": {
+        "x": -2717,
+        "y": 84,
+        "z": 151
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_market_village_086",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": -738,
+        "y": 73,
+        "z": -2000
+      },
+      "buildings": 11,
+      "pois": {
+        "well": {
+          "x": -738,
+          "y": 73,
+          "z": -2000
+        }
+      }
+    },
+    {
+      "id": "fire_fire_outpost_087",
+      "kind": "fire_outpost",
+      "nation": "fire",
+      "center": {
+        "x": -3701,
+        "y": 68,
+        "z": -564
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "fire_fire_village_088",
+      "kind": "fire_village",
+      "nation": "fire",
+      "center": {
+        "x": -3951,
+        "y": 76,
+        "z": 282
+      },
+      "buildings": 4,
+      "pois": {
+        "shrine": {
+          "x": -3951,
+          "y": 76,
+          "z": 282
+        }
+      }
+    },
+    {
+      "id": "fire_fire_village_089",
+      "kind": "fire_village",
+      "nation": "fire",
+      "center": {
+        "x": -1897,
+        "y": 73,
+        "z": 73
+      },
+      "buildings": 4,
+      "pois": {
+        "shrine": {
+          "x": -1897,
+          "y": 73,
+          "z": 73
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_090",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1049,
+        "y": 73,
+        "z": 1453
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 1049,
+          "y": 73,
+          "z": 1453
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_091",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 610,
+        "y": 107,
+        "z": -1035
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 610,
+          "y": 107,
+          "z": -1035
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_092",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 949,
+        "y": 68,
+        "z": -340
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 949,
+          "y": 68,
+          "z": -340
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_093",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2970,
+        "y": 82,
+        "z": -1304
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 2970,
+          "y": 82,
+          "z": -1304
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_094",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2392,
+        "y": 81,
+        "z": 725
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 2392,
+          "y": 81,
+          "z": 725
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_095",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1510,
+        "y": 69,
+        "z": -1679
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 1510,
+          "y": 69,
+          "z": -1679
+        }
+      }
+    },
+    {
+      "id": "earth_watchtower_post_096",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": 3720,
+        "y": 72,
+        "z": -348
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "water_igloo_camp_097",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -991,
+        "y": 67,
+        "z": -3224
+      },
+      "buildings": 3,
+      "pois": {}
+    },
+    {
+      "id": "fire_fire_village_098",
+      "kind": "fire_village",
+      "nation": "fire",
+      "center": {
+        "x": -3447,
+        "y": 69,
+        "z": 534
+      },
+      "buildings": 6,
+      "pois": {
+        "shrine": {
+          "x": -3447,
+          "y": 69,
+          "z": 534
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_099",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": -787,
+        "y": 95,
+        "z": -2272
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": -787,
+          "y": 95,
+          "z": -2272
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_100",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3930,
+        "y": 67,
+        "z": -1005
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 3930,
+          "y": 67,
+          "z": -1005
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_101",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 404,
+        "y": 100,
+        "z": -96
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 404,
+          "y": 100,
+          "z": -96
+        }
+      }
+    },
+    {
+      "id": "fire_fire_village_102",
+      "kind": "fire_village",
+      "nation": "fire",
+      "center": {
+        "x": -3728,
+        "y": 67,
+        "z": 139
+      },
+      "buildings": 5,
+      "pois": {
+        "shrine": {
+          "x": -3728,
+          "y": 67,
+          "z": 139
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_103",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": 990,
+        "y": 67,
+        "z": -2732
+      },
+      "buildings": 4,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_104",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 929,
+        "y": 68,
+        "z": 717
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 929,
+          "y": 68,
+          "z": 717
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_105",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": 614,
+        "y": 85,
+        "z": 2826
+      },
+      "buildings": 6,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_106",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3182,
+        "y": 68,
+        "z": -2148
+      },
+      "buildings": 4,
+      "pois": {
+        "well": {
+          "x": 3182,
+          "y": 68,
+          "z": -2148
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_107",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": 678,
+        "y": 71,
+        "z": -2707
+      },
+      "buildings": 6,
+      "pois": {}
+    },
+    {
+      "id": "water_igloo_camp_108",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": 10,
+        "y": 71,
+        "z": 3233
+      },
+      "buildings": 6,
+      "pois": {}
+    },
+    {
+      "id": "air_air_shrine_109",
+      "kind": "air_shrine",
+      "nation": "air",
+      "center": {
+        "x": -757,
+        "y": 72,
+        "z": 1626
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_farm_hamlet_110",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 3664,
+        "y": 70,
+        "z": -949
+      },
+      "buildings": 5,
+      "pois": {
+        "well": {
+          "x": 3664,
+          "y": 70,
+          "z": -949
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_111",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 2093,
+        "y": 72,
+        "z": 865
+      },
+      "buildings": 6,
+      "pois": {
+        "well": {
+          "x": 2093,
+          "y": 72,
+          "z": 865
+        }
+      }
+    },
+    {
+      "id": "earth_watchtower_post_112",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": -1336,
+        "y": 79,
+        "z": -2400
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "earth_market_village_113",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": 2806,
+        "y": 68,
+        "z": -631
+      },
+      "buildings": 11,
+      "pois": {
+        "well": {
+          "x": 2806,
+          "y": 68,
+          "z": -631
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_114",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 1620,
+        "y": 79,
+        "z": 975
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 1620,
+          "y": 79,
+          "z": 975
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_115",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 735,
+        "y": 102,
+        "z": -1814
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 735,
+          "y": 102,
+          "z": -1814
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_116",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": -265,
+        "y": 67,
+        "z": -878
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": -265,
+          "y": 67,
+          "z": -878
+        }
+      }
+    },
+    {
+      "id": "fire_fire_village_117",
+      "kind": "fire_village",
+      "nation": "fire",
+      "center": {
+        "x": -3284,
+        "y": 68,
+        "z": 118
+      },
+      "buildings": 7,
+      "pois": {
+        "shrine": {
+          "x": -3284,
+          "y": 68,
+          "z": 118
+        }
+      }
+    },
+    {
+      "id": "earth_watchtower_post_118",
+      "kind": "watchtower_post",
+      "nation": "earth",
+      "center": {
+        "x": -1052,
+        "y": 105,
+        "z": -2194
+      },
+      "buildings": 1,
+      "pois": {}
+    },
+    {
+      "id": "water_igloo_camp_119",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -412,
+        "y": 65,
+        "z": 3308
+      },
+      "buildings": 6,
+      "pois": {}
+    },
+    {
+      "id": "earth_market_village_120",
+      "kind": "market_village",
+      "nation": "earth",
+      "center": {
+        "x": -479,
+        "y": 68,
+        "z": -1207
+      },
+      "buildings": 11,
+      "pois": {
+        "well": {
+          "x": -479,
+          "y": 68,
+          "z": -1207
+        }
+      }
+    },
+    {
+      "id": "earth_farm_hamlet_121",
+      "kind": "farm_hamlet",
+      "nation": "earth",
+      "center": {
+        "x": 212,
+        "y": 72,
+        "z": -1774
+      },
+      "buildings": 3,
+      "pois": {
+        "well": {
+          "x": 212,
+          "y": 72,
+          "z": -1774
+        }
+      }
+    },
+    {
+      "id": "water_igloo_camp_122",
+      "kind": "igloo_camp",
+      "nation": "water",
+      "center": {
+        "x": -548,
+        "y": 87,
+        "z": 2905
+      },
+      "buildings": 6,
+      "pois": {}
+    }
+  ],
+  "roads": [
+    {
+      "from": "earth_watchtower_post_000",
+      "to": "earth_farm_hamlet_025",
+      "length": 269
+    },
+    {
+      "from": "earth_watchtower_post_000",
+      "to": "earth_farm_hamlet_034",
+      "length": 326
+    },
+    {
+      "from": "earth_watchtower_post_000",
+      "to": "earth_farm_hamlet_053",
+      "length": 413
+    },
+    {
+      "from": "earth_watchtower_post_000",
+      "to": "earth_farm_hamlet_093",
+      "length": 284
+    },
+    {
+      "from": "earth_market_village_001",
+      "to": "earth_farm_hamlet_026",
+      "length": 276
+    },
+    {
+      "from": "earth_market_village_001",
+      "to": "earth_farm_hamlet_036",
+      "length": 270
+    },
+    {
+      "from": "earth_market_village_001",
+      "to": "earth_farm_hamlet_082",
+      "length": 274
+    },
+    {
+      "from": "earth_market_village_002",
+      "to": "earth_farm_hamlet_104",
+      "length": 264
+    },
+    {
+      "from": "earth_market_village_002",
+      "to": "omashu",
+      "length": 287
+    },
+    {
+      "from": "earth_market_village_002",
+      "to": "misty_palms_oasis",
+      "length": 377
+    },
+    {
+      "from": "earth_farm_hamlet_003",
+      "to": "earth_farm_hamlet_008",
+      "length": 274
+    },
+    {
+      "from": "earth_farm_hamlet_003",
+      "to": "earth_farm_hamlet_091",
+      "length": 367
+    },
+    {
+      "from": "earth_farm_hamlet_003",
+      "to": "great_divide",
+      "length": 474
+    },
+    {
+      "from": "water_igloo_camp_004",
+      "to": "water_igloo_camp_061",
+      "length": 316
+    },
+    {
+      "from": "water_igloo_camp_004",
+      "to": "water_igloo_camp_122",
+      "length": 372
+    },
+    {
+      "from": "earth_farm_hamlet_005",
+      "to": "serpents_pass",
+      "length": 350
+    },
+    {
+      "from": "earth_farm_hamlet_007",
+      "to": "earth_farm_hamlet_019",
+      "length": 244
+    },
+    {
+      "from": "earth_farm_hamlet_008",
+      "to": "earth_watchtower_post_063",
+      "length": 263
+    },
+    {
+      "from": "earth_farm_hamlet_008",
+      "to": "wulong_forest",
+      "length": 480
+    },
+    {
+      "from": "water_igloo_camp_009",
+      "to": "water_igloo_camp_108",
+      "length": 330
+    },
+    {
+      "from": "water_igloo_camp_009",
+      "to": "water_igloo_camp_119",
+      "length": 326
+    },
+    {
+      "from": "water_igloo_camp_009",
+      "to": "southern_water_tribe",
+      "length": 322
+    },
+    {
+      "from": "earth_watchtower_post_010",
+      "to": "earth_farm_hamlet_011",
+      "length": 430
+    },
+    {
+      "from": "earth_watchtower_post_010",
+      "to": "earth_farm_hamlet_116",
+      "length": 394
+    },
+    {
+      "from": "earth_farm_hamlet_011",
+      "to": "earth_farm_hamlet_030",
+      "length": 399
+    },
+    {
+      "from": "earth_farm_hamlet_011",
+      "to": "earth_farm_hamlet_079",
+      "length": 248
+    },
+    {
+      "from": "fire_fire_village_012",
+      "to": "fire_fire_outpost_035",
+      "length": 205
+    },
+    {
+      "from": "fire_fire_village_012",
+      "to": "fire_fire_outpost_077",
+      "length": 378
+    },
+    {
+      "from": "earth_watchtower_post_013",
+      "to": "earth_farm_hamlet_053",
+      "length": 396
+    },
+    {
+      "from": "earth_watchtower_post_013",
+      "to": "earth_market_village_057",
+      "length": 305
+    },
+    {
+      "from": "earth_farm_hamlet_014",
+      "to": "earth_farm_hamlet_080",
+      "length": 442
+    },
+    {
+      "from": "earth_farm_hamlet_014",
+      "to": "earth_farm_hamlet_095",
+      "length": 300
+    },
+    {
+      "from": "water_igloo_camp_015",
+      "to": "water_igloo_camp_020",
+      "length": 449
+    },
+    {
+      "from": "earth_farm_hamlet_016",
+      "to": "earth_farm_hamlet_040",
+      "length": 272
+    },
+    {
+      "from": "earth_farm_hamlet_016",
+      "to": "earth_watchtower_post_118",
+      "length": 303
+    },
+    {
+      "from": "fire_fire_village_017",
+      "to": "sun_warriors",
+      "length": 302
+    },
+    {
+      "from": "fire_fire_village_017",
+      "to": "fire_nation_capital",
+      "length": 400
+    },
+    {
+      "from": "water_igloo_camp_018",
+      "to": "water_igloo_camp_061",
+      "length": 311
+    },
+    {
+      "from": "earth_farm_hamlet_019",
+      "to": "earth_farm_hamlet_059",
+      "length": 257
+    },
+    {
+      "from": "earth_farm_hamlet_019",
+      "to": "earth_watchtower_post_096",
+      "length": 255
+    },
+    {
+      "from": "water_igloo_camp_022",
+      "to": "water_igloo_camp_042",
+      "length": 322
+    },
+    {
+      "from": "earth_farm_hamlet_023",
+      "to": "earth_farm_hamlet_040",
+      "length": 461
+    },
+    {
+      "from": "earth_farm_hamlet_023",
+      "to": "earth_market_village_046",
+      "length": 261
+    },
+    {
+      "from": "water_igloo_camp_024",
+      "to": "water_igloo_camp_108",
+      "length": 388
+    },
+    {
+      "from": "earth_farm_hamlet_025",
+      "to": "earth_farm_hamlet_110",
+      "length": 257
+    },
+    {
+      "from": "earth_farm_hamlet_026",
+      "to": "earth_market_village_038",
+      "length": 263
+    },
+    {
+      "from": "earth_farm_hamlet_027",
+      "to": "earth_farm_hamlet_068",
+      "length": 245
+    },
+    {
+      "from": "earth_farm_hamlet_027",
+      "to": "earth_watchtower_post_096",
+      "length": 282
+    },
+    {
+      "from": "earth_market_village_028",
+      "to": "earth_farm_hamlet_030",
+      "length": 355
+    },
+    {
+      "from": "earth_market_village_028",
+      "to": "earth_farm_hamlet_039",
+      "length": 282
+    },
+    {
+      "from": "earth_market_village_028",
+      "to": "earth_farm_hamlet_074",
+      "length": 419
+    },
+    {
+      "from": "earth_market_village_029",
+      "to": "earth_watchtower_post_112",
+      "length": 254
+    },
+    {
+      "from": "earth_market_village_029",
+      "to": "earth_watchtower_post_118",
+      "length": 264
+    },
+    {
+      "from": "earth_market_village_032",
+      "to": "earth_farm_hamlet_100",
+      "length": 249
+    },
+    {
+      "from": "earth_market_village_032",
+      "to": "earth_farm_hamlet_110",
+      "length": 240
+    },
+    {
+      "from": "water_igloo_camp_033",
+      "to": "earth_farm_hamlet_060",
+      "length": 342
+    },
+    {
+      "from": "water_igloo_camp_033",
+      "to": "earth_farm_hamlet_080",
+      "length": 343
+    },
+    {
+      "from": "water_igloo_camp_033",
+      "to": "water_igloo_camp_103",
+      "length": 408
+    },
+    {
+      "from": "earth_farm_hamlet_034",
+      "to": "earth_market_village_113",
+      "length": 267
+    },
+    {
+      "from": "fire_fire_outpost_035",
+      "to": "fire_fire_village_098",
+      "length": 240
+    },
+    {
+      "from": "earth_farm_hamlet_036",
+      "to": "earth_farm_hamlet_090",
+      "length": 287
+    },
+    {
+      "from": "earth_watchtower_post_037",
+      "to": "earth_farm_hamlet_078",
+      "length": 599
+    },
+    {
+      "from": "earth_watchtower_post_037",
+      "to": "earth_farm_hamlet_083",
+      "length": 243
+    },
+    {
+      "from": "earth_market_village_038",
+      "to": "earth_market_village_045",
+      "length": 325
+    },
+    {
+      "from": "earth_farm_hamlet_039",
+      "to": "earth_market_village_086",
+      "length": 333
+    },
+    {
+      "from": "earth_farm_hamlet_041",
+      "to": "earth_farm_hamlet_111",
+      "length": 251
+    },
+    {
+      "from": "water_igloo_camp_042",
+      "to": "water_igloo_camp_043",
+      "length": 424
+    },
+    {
+      "from": "water_igloo_camp_043",
+      "to": "water_igloo_camp_097",
+      "length": 347
+    },
+    {
+      "from": "earth_market_village_045",
+      "to": "earth_farm_hamlet_073",
+      "length": 325
+    },
+    {
+      "from": "earth_market_village_045",
+      "to": "earth_farm_hamlet_104",
+      "length": 280
+    },
+    {
+      "from": "air_air_shrine_047",
+      "to": "air_air_shrine_071",
+      "length": 548
+    },
+    {
+      "from": "earth_farm_hamlet_048",
+      "to": "earth_farm_hamlet_075",
+      "length": 252
+    },
+    {
+      "from": "earth_farm_hamlet_048",
+      "to": "earth_farm_hamlet_080",
+      "length": 274
+    },
+    {
+      "from": "earth_farm_hamlet_049",
+      "to": "earth_farm_hamlet_083",
+      "length": 300
+    },
+    {
+      "from": "earth_farm_hamlet_050",
+      "to": "earth_farm_hamlet_095",
+      "length": 249
+    },
+    {
+      "from": "earth_farm_hamlet_051",
+      "to": "wulong_forest",
+      "length": 321
+    },
+    {
+      "from": "earth_watchtower_post_052",
+      "to": "earth_farm_hamlet_064",
+      "length": 278
+    },
+    {
+      "from": "earth_watchtower_post_052",
+      "to": "earth_farm_hamlet_091",
+      "length": 316
+    },
+    {
+      "from": "earth_farm_hamlet_054",
+      "to": "earth_farm_hamlet_079",
+      "length": 262
+    },
+    {
+      "from": "earth_farm_hamlet_054",
+      "to": "earth_farm_hamlet_115",
+      "length": 254
+    },
+    {
+      "from": "earth_market_village_058",
+      "to": "earth_farm_hamlet_073",
+      "length": 255
+    },
+    {
+      "from": "earth_farm_hamlet_060",
+      "to": "water_igloo_camp_107",
+      "length": 514
+    },
+    {
+      "from": "earth_market_village_062",
+      "to": "earth_farm_hamlet_101",
+      "length": 257
+    },
+    {
+      "from": "earth_market_village_062",
+      "to": "omashu",
+      "length": 266
+    },
+    {
+      "from": "earth_watchtower_post_063",
+      "to": "earth_farm_hamlet_092",
+      "length": 382
+    },
+    {
+      "from": "earth_watchtower_post_063",
+      "to": "earth_farm_hamlet_101",
+      "length": 283
+    },
+    {
+      "from": "earth_farm_hamlet_066",
+      "to": "earth_watchtower_post_081",
+      "length": 476
+    },
+    {
+      "from": "earth_farm_hamlet_067",
+      "to": "earth_farm_hamlet_079",
+      "length": 248
+    },
+    {
+      "from": "earth_farm_hamlet_068",
+      "to": "earth_farm_hamlet_110",
+      "length": 249
+    },
+    {
+      "from": "fire_fire_village_069",
+      "to": "fire_fire_outpost_072",
+      "length": 465
+    },
+    {
+      "from": "fire_fire_village_069",
+      "to": "fire_fire_outpost_087",
+      "length": 209
+    },
+    {
+      "from": "earth_farm_hamlet_074",
+      "to": "earth_market_village_120",
+      "length": 400
+    },
+    {
+      "from": "earth_farm_hamlet_076",
+      "to": "earth_farm_hamlet_083",
+      "length": 275
+    },
+    {
+      "from": "fire_fire_outpost_077",
+      "to": "fire_fire_outpost_085",
+      "length": 380
+    },
+    {
+      "from": "fire_fire_outpost_077",
+      "to": "fire_fire_village_117",
+      "length": 439
+    },
+    {
+      "from": "earth_farm_hamlet_078",
+      "to": "full_moon_bay",
+      "length": 222
+    },
+    {
+      "from": "earth_farm_hamlet_079",
+      "to": "earth_farm_hamlet_121",
+      "length": 280
+    },
+    {
+      "from": "earth_watchtower_post_081",
+      "to": "earth_farm_hamlet_115",
+      "length": 264
+    },
+    {
+      "from": "earth_farm_hamlet_082",
+      "to": "earth_farm_hamlet_114",
+      "length": 342
+    },
+    {
+      "from": "earth_farm_hamlet_082",
+      "to": "gaoling",
+      "length": 225
+    },
+    {
+      "from": "water_igloo_camp_084",
+      "to": "water_igloo_camp_108",
+      "length": 336
+    },
+    {
+      "from": "earth_market_village_086",
+      "to": "earth_farm_hamlet_099",
+      "length": 276
+    },
+    {
+      "from": "fire_fire_outpost_087",
+      "to": "fire_nation_capital",
+      "length": 410
+    },
+    {
+      "from": "fire_fire_village_088",
+      "to": "fire_fire_village_102",
+      "length": 264
+    },
+    {
+      "from": "fire_fire_village_088",
+      "to": "sun_warriors",
+      "length": 272
+    },
+    {
+      "from": "fire_fire_village_089",
+      "to": "ember_island",
+      "length": 362
+    },
+    {
+      "from": "earth_farm_hamlet_094",
+      "to": "earth_farm_hamlet_111",
+      "length": 330
+    },
+    {
+      "from": "fire_fire_village_098",
+      "to": "fire_fire_village_102",
+      "length": 484
+    },
+    {
+      "from": "earth_farm_hamlet_099",
+      "to": "earth_watchtower_post_118",
+      "length": 276
+    },
+    {
+      "from": "earth_farm_hamlet_101",
+      "to": "senlin_village",
+      "length": 240
+    },
+    {
+      "from": "water_igloo_camp_107",
+      "to": "northern_air_temple",
+      "length": 482
+    },
+    {
+      "from": "earth_farm_hamlet_111",
+      "to": "gaoling",
+      "length": 271
+    },
+    {
+      "from": "earth_market_village_113",
+      "to": "serpents_pass",
+      "length": 330
+    },
+    {
+      "from": "earth_farm_hamlet_115",
+      "to": "northern_air_temple",
+      "length": 447
+    },
+    {
+      "from": "earth_farm_hamlet_116",
+      "to": "great_divide",
+      "length": 434
+    },
+    {
+      "from": "water_igloo_camp_122",
+      "to": "southern_water_tribe",
+      "length": 227
+    },
+    {
+      "from": "serpents_pass",
+      "to": "full_moon_bay",
+      "length": 367
+    },
+    {
+      "from": "wan_shi_tong_library",
+      "to": "misty_palms_oasis",
+      "length": 643
+    },
+    {
+      "from": "wan_shi_tong_library",
+      "to": "si_wong_rock",
+      "length": 443
+    }
+  ]
+}
