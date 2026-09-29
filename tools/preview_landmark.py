@@ -19,7 +19,7 @@ from atla_builder.terrain import TerrainModel  # noqa: E402
 
 def main(tpath, gpath, lid, out, max_side=900):
     tm = TerrainModel.load(tpath)
-    geo = GeoRef.from_json(json.load(open(gpath)))
+    geo = GeoRef.from_json(json.load(open(gpath, encoding="utf-8")))
     lm = {l["id"]: l for l in load_landmarks()}[lid]
     site = Locator(tm, geo).locate(lm)
     reg = Registry(3837)

@@ -15,7 +15,7 @@ from pathlib import Path
 
 import numpy as np
 
-from . import __version__, scatter
+from . import __version__, lfs, scatter
 from .anvil import World, copy_world
 from .blocks import Registry
 from .buffer import EditBuffer, apply_buffers
@@ -28,15 +28,25 @@ from .structures.registry import BUILDERS
 from .terrain import NONE, TerrainModel, scan_world
 
 
-def _extract_if_zip(src: Path, work: Path, log) -> Path:
+def _extract_if_zip(src: Path, work: Path, log, lfs_repo: str | None = None) -> Path:
+    if not src.exists():
+        raise FileNotFoundError(f"{src} not found")
+    if src.is_file() and lfs.read_pointer(src):
+        # GitHub's "Download ZIP" ships the LFS pointer, not the 772 MB world
+        src = lfs.fetch(src, work / src.name, repo=lfs_repo, log=log)
     if src.suffix.lower() != ".zip":
         return src
+    if not zipfile.is_zipfile(src):
+        raise ValueError(f"{src} is not a zip file (size {src.stat().st_size} bytes). If it came from "
+                         "GitHub's 'Download ZIP', fetch the real file with Git LFS or pass the world folder.")
     dest = work / "world_src"
-    if not dest.exists():
+    marker = dest / ".extracted"
+    if not marker.exists():
         log(f"extracting {src} ...")
         with zipfile.ZipFile(src) as z:
             z.extractall(dest)
-    for p in [dest, *dest.iterdir()]:
+        marker.write_text("ok", encoding="utf-8")
+    for p in [dest, *sorted(d for d in dest.iterdir() if d.is_dir())]:
         if (p / "level.dat").exists() and (p / "region").is_dir():
             return p
     raise FileNotFoundError("no world (level.dat + region/) inside the zip")
@@ -57,7 +67,8 @@ def load_overrides() -> dict:
     p = ROOT / "config" / "schematic_overrides.json"
     if not p.exists():
         return {}
-    return {k: v for k, v in json.loads(p.read_text()).get("overrides", {}).items() if v.get("approved")}
+    doc = json.loads(p.read_text(encoding="utf-8"))
+    return {k: v for k, v in doc.get("overrides", {}).items() if v.get("approved")}
 
 
 def build_override(ctx: BuildContext, spec: dict) -> None:
@@ -76,12 +87,13 @@ def build_override(ctx: BuildContext, spec: dict) -> None:
 
 
 def run(world: str | Path, out: str | Path, only: list[str] | None = None, scatter_on: bool = True,
-        schematics: bool = True, workers: int | None = None, zip_out: bool = False, log=print) -> dict:
+        schematics: bool = True, workers: int | None = None, zip_out: bool = False, log=print,
+        lfs_repo: str | None = None) -> dict:
     t0 = time.time()
     out = Path(out)
     work = out / "_work"
     work.mkdir(parents=True, exist_ok=True)
-    src = _extract_if_zip(Path(world), work, log)
+    src = _extract_if_zip(Path(world), work, log, lfs_repo)
     dst = out / f"{src.name}_populated"
     if dst.exists():
         shutil.rmtree(dst)
@@ -183,7 +195,7 @@ def run(world: str | Path, out: str | Path, only: list[str] | None = None, scatt
         "settlements": settlements,
         "roads": roads,
     }
-    (out / "placements.json").write_text(json.dumps(log_doc, indent=2))
+    (out / "placements.json").write_text(json.dumps(log_doc, indent=2), encoding="utf-8")
     img = terrain_image(tm, 8)
     overlay_sites(img, tm, 8, sites, {l["id"]: l.get("footprint_r", 60) for l in lms})
     img.save(out / "overview.png")

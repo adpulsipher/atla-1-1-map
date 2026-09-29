@@ -47,7 +47,7 @@ class GeoRef:
         return cls(**{k: d[k] for k in ("ax", "bx", "az", "bz", "method", "score") if k in d})
 
     def save(self, path) -> None:
-        with open(path, "w") as f:
+        with open(path, "w", encoding="utf-8") as f:
             json.dump(self.to_json(), f, indent=2)
 
 

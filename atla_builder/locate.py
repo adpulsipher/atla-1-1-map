@@ -44,7 +44,7 @@ class Site:
 
 
 def load_landmarks(path: str | Path | None = None) -> list[dict]:
-    with open(path or ROOT / "config" / "landmarks.json") as f:
+    with open(path or ROOT / "config" / "landmarks.json", encoding="utf-8") as f:
         return json.load(f)["landmarks"]
 
 

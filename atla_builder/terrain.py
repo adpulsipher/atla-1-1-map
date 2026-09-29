@@ -242,10 +242,11 @@ def scan_world(world: World, workers: int | None = None, log=print) -> TerrainMo
     water = np.full((W, L), NONE, np.int16)
     surf = np.zeros((W, L), np.uint8)
     jobs = [(str(world.path), rx, rz) for rx, rz in coords]
-    workers = workers or os.cpu_count() or 2
+    workers = workers or min(os.cpu_count() or 2, 8)
+    ex = None
     if workers > 1 and len(jobs) > 1:
-        ex = ProcessPoolExecutor(workers)
-        it = ex.map(_scan_region, jobs)
+        ex = ProcessPoolExecutor(workers, mp_context=_mp_context())
+        it = ex.map(_scan_region, jobs, chunksize=2)
     else:
         it = map(_scan_region, jobs)
     for n, (rx, rz, g, t, w, s) in enumerate(it, 1):
@@ -260,9 +261,18 @@ def scan_world(world: World, workers: int | None = None, log=print) -> TerrainMo
         ground[dst], top[dst], water[dst], surf[dst] = g[src], t[src], w[src], s[src]
         if n % 20 == 0 or n == len(jobs):
             log(f"  scan: {n}/{len(jobs)} regions")
+    if ex is not None:
+        ex.shutdown()
     tm = TerrainModel(min_x, min_z, ground, top, water, surf)
     tm.sea_level = tm.estimate_sea_level()
     return tm
+
+
+def _mp_context():
+    """Platform default start method; ATLA_MP_START=spawn reproduces Windows."""
+    import multiprocessing as mp
+    method = os.environ.get("ATLA_MP_START")
+    return mp.get_context(method) if method else None
 
 
 # --------------------------------------------------------------------------

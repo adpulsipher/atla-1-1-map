@@ -18,6 +18,8 @@ def main(argv=None) -> None:
     b.add_argument("--no-schematics", action="store_true", help="skip .schem export")
     b.add_argument("--zip", action="store_true", help="also zip the populated world")
     b.add_argument("--workers", type=int, default=None)
+    b.add_argument("--lfs-repo", default=None,
+                   help="owner/repo to fetch ATLAB9k.zip from when --world is a Git LFS pointer")
     l = sub.add_parser("locate", help="scan terrain and print landmark sites (no writes)")
     l.add_argument("--world", required=True)
     l.add_argument("--out", required=True)
@@ -30,7 +32,7 @@ def main(argv=None) -> None:
     if a.cmd == "build":
         from .pipeline import run
         run(a.world, a.out, only=a.only, scatter_on=not a.no_scatter, schematics=not a.no_schematics,
-            workers=a.workers, zip_out=a.zip)
+            workers=a.workers, zip_out=a.zip, lfs_repo=a.lfs_repo)
     elif a.cmd == "locate":
         from .anvil import World
         from .locate import locate_all, load_landmarks
@@ -44,7 +46,8 @@ def main(argv=None) -> None:
         geo = georeference(tm)
         geo.save(out / "georef.json")
         sites = locate_all(tm, geo, load_landmarks())
-        (out / "sites.json").write_text(json.dumps({k: v.to_json() for k, v in sites.items()}, indent=2))
+        (out / "sites.json").write_text(json.dumps({k: v.to_json() for k, v in sites.items()}, indent=2),
+                                        encoding="utf-8")
     elif a.cmd == "preview":
         sys.argv = ["preview", a.terrain, a.georef, a.landmark, a.png]
         from importlib import util

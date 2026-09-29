@@ -266,7 +266,8 @@ def generate_world(out_dir: str | Path, bounds=(-4500, -3500, 4500, 3500), seed:
     if workers == 1 or len(jobs) == 1:
         results = map(generate_region, jobs)
     else:
-        ex = ProcessPoolExecutor(workers)
+        from .terrain import _mp_context
+        ex = ProcessPoolExecutor(workers, mp_context=_mp_context())
         results = ex.map(generate_region, jobs)
     for rx, rz, n in results:
         done += 1

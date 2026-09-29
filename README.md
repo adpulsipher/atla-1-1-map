@@ -11,6 +11,12 @@ pip install -r requirements.txt
 python -m atla_builder build --world ATLAB9k.zip --out out --zip
 ```
 
+`ATLAB9k.zip` is stored with Git LFS. GitHub's **Download ZIP** button (and `git clone` without
+Git LFS installed) gives you a 134-byte pointer file instead of the 772 MB world. The build
+detects the pointer and downloads the real file into `out/_work/`, checking its SHA-256. For a
+private repository, set a token with read access first (`$env:GITHUB_TOKEN="..."` in
+PowerShell). You can also pass the real file or an unzipped world folder with `--world`.
+
 The build takes about 4 minutes on 4 cores (a 2-minute terrain scan, then about 100 s of building and writing). The `out/` folder then contains:
 
 | Path | What it is |
