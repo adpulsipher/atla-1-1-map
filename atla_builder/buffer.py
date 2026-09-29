@@ -406,8 +406,23 @@ class EditBuffer(Primitives):
                     tmd[m] = mode
 
     def add_block_entity(self, x: int, y: int, z: int, nbt_factory) -> None:
-        """``nbt_factory(data_version) -> nbtlib Compound`` without x/y/z."""
+        """``nbt_factory(chunk_data_version) -> Compound`` (without x/y/z), or None to skip."""
         self.block_entities.append({"pos": (x, y, z), "factory": nbt_factory})
+
+    def clear_box(self, x0: int, z0: int, x1: int, z1: int, y0: int = -64, y1: int = 319) -> None:
+        """Forget every edit inside the box (used to swap in an imported build)."""
+        for (cx, cy, cz), (sid, smd) in self.secs.items():
+            if cx * 16 > x1 or cx * 16 + 15 < x0 or cz * 16 > z1 or cz * 16 + 15 < z0 \
+                    or cy * 16 > y1 or cy * 16 + 15 < y0:
+                continue
+            ys = slice(max(y0 - cy * 16, 0), min(y1 - cy * 16, 15) + 1)
+            zs = slice(max(z0 - cz * 16, 0), min(z1 - cz * 16, 15) + 1)
+            xs = slice(max(x0 - cx * 16, 0), min(x1 - cx * 16, 15) + 1)
+            sid[ys, zs, xs] = 0
+            smd[ys, zs, xs] = 0
+        self.block_entities = [b for b in self.block_entities
+                               if not (x0 <= b["pos"][0] <= x1 and z0 <= b["pos"][2] <= z1
+                                       and y0 <= b["pos"][1] <= y1)]
 
     def merge_from(self, other: "EditBuffer") -> None:
         for k, (oid, omd) in other.secs.items():
@@ -498,7 +513,9 @@ def apply_buffers(world, buffers: Iterable[EditBuffer], out_region_dir=None, log
                         stats["promoted"] = stats.get("promoted", 0) + 1
                 for be in bes_here:
                     x, y, z = be["pos"]
-                    nbt = be["factory"](world.data_version)
+                    nbt = be["factory"](ch.data_version or world.data_version)
+                    if nbt is None:
+                        continue
                     nbt["x"], nbt["y"], nbt["z"] = T.Int(x), T.Int(y), T.Int(z)
                     ch.add_block_entity(nbt)
                 rf.put_nbt(cx & 31, cz & 31, root)

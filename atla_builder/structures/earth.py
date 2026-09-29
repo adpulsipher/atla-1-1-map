@@ -604,19 +604,26 @@ def serpents_pass(ctx: BuildContext) -> None:
 
 
 def _sign_factory(lines: list[str]):
+    """Sign block entity in the storage format of the chunk it lands in."""
     import json
 
     from nbtlib import tag as T
 
+    from ..imports import DV_TEXT_NBT, convert_block_entity
+
     def make(dv: int):
-        if dv >= 4325:  # 1.21.5+: text components stored as NBT strings
+        if dv >= DV_TEXT_NBT:  # 1.21.5+: text components stored as NBT
             msgs = [T.String(t) for t in lines]
+            blank = [T.String("")] * 4
         else:
             msgs = [T.String(json.dumps({"text": t})) for t in lines]
+            blank = [T.String('""')] * 4
         side = lambda m: T.Compound({"messages": T.List[T.String](m), "color": T.String("black"),  # noqa: E731
                                      "has_glowing_text": T.Byte(0)})
-        return T.Compound({"id": T.String("minecraft:sign"), "keepPacked": T.Byte(0), "is_waxed": T.Byte(1),
-                           "front_text": side(msgs), "back_text": side([T.String('""') if dv < 4325 else T.String("")] * 4)})
+        be = T.Compound({"id": T.String("minecraft:sign"), "is_waxed": T.Byte(1),
+                         "front_text": side(msgs), "back_text": side(blank)})
+        # chunks older than 1.20 (e.g. WorldPainter's 1.18 chunks) need Text1..4
+        return convert_block_entity(be, dv, dv)
     return make
 
 

@@ -1,0 +1,12 @@
+{
+  "pack": {
+    "description": "ATLA world: the Atlas teleport menu (/trigger atla_atlas for a copy)",
+    "pack_format": 41,
+    "supported_formats": {
+      "min_inclusive": 41,
+      "max_inclusive": 1000
+    },
+    "min_format": 41,
+    "max_format": 1000
+  }
+}

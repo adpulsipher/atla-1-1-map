@@ -15,14 +15,14 @@ from pathlib import Path
 
 import numpy as np
 
-from . import __version__, lfs, scatter
+from . import __version__, datapack, lfs, scatter
 from .anvil import World, copy_world
 from .blocks import Registry
 from .buffer import EditBuffer, apply_buffers
 from .geo import GeoRef, register
 from .locate import ROOT, Locator, load_landmarks
 from .render import overlay_sites, terrain_image
-from .schem import export_landmark, read_schem
+from .schem import export_landmark
 from .structures.common import BuildContext
 from .structures.registry import BUILDERS
 from .terrain import NONE, TerrainModel, scan_world
@@ -71,19 +71,37 @@ def load_overrides() -> dict:
     return {k: v for k, v in doc.get("overrides", {}).items() if v.get("approved")}
 
 
-def build_override(ctx: BuildContext, spec: dict) -> None:
-    """Paste a reviewed community schematic at the located site."""
-    ids, off = read_schem(ROOT / spec["file"], ctx.reg)
-    H, L, W = ids.shape
-    s = ctx.site
-    y = spec.get("y") or ctx.ground_median(s.x, s.z, max(W, L) // 2)
-    ctx.level_pad(s.x, s.z, max(W, L) / 2, max(W, L) / 2 + 20, y)
-    from .buffer import Canvas
-    cv = Canvas(ctx.reg, (W, H, L))
-    cv.ids[:] = ids.transpose(2, 0, 1)
-    cv.mode[cv.ids != 0] = 1
-    ctx.place(cv, s.x, s.z, y + spec.get("y_offset", 0), spec.get("facing", "south"),
-              anchor=(W // 2, 0, L // 2))
+def build_with_override(ctx: BuildContext, lm: dict, spec: dict, work: Path, log, root: Path = ROOT) -> dict:
+    """Place a reviewed community build.
+
+    mode "replace": the build *is* the landmark (procedural builder skipped).
+    mode "core":    the procedural landmark is built first, then the area
+                    around ``core_poi`` is cleared and the build dropped in
+                    (e.g. a community Fire Nation palace inside the caldera).
+    """
+    from .imports import load_build, place_build
+
+    build = load_build(spec, ctx.reg, root, work)
+    mode = spec.get("mode", "replace")
+    if mode == "core":
+        BUILDERS[lm["builder"]](ctx)
+        poi = ctx.pois[spec["core_poi"]]
+        X, _, Z = build.size
+        q = {"south": 0, "west": 1, "north": 2, "east": 3}[spec.get("facing") or
+                                                          {0: "south", 1: "west", 2: "north", 3: "east"}[int(spec.get("rotate", 0)) % 4]]
+        fx, fz = (X, Z) if q % 2 == 0 else (Z, X)
+        m = int(spec.get("clear_margin", 6))
+        ctx.struct.clear_box(poi["x"] - fx // 2 - m, poi["z"] - fz // 2 - m,
+                             poi["x"] + fx // 2 + m, poi["z"] + fz // 2 + m)
+        info = place_build(ctx, build, spec, at=(poi["x"], poi["z"]),
+                           ground_y=spec.get("y") if isinstance(spec.get("y"), int) else poi["y"] - 1)
+    else:
+        info = place_build(ctx, build, spec)
+    for name, p in spec.get("pois", {}).items():  # optional hand-picked POIs, build-local coords
+        ctx.poi(name, *p[:3], p[3] if len(p) > 3 else "")
+    log(f"    {lm['id']}: community build '{build.name}' ({build.source_format}, "
+        f"{info['size'][0]}x{info['size'][1]}x{info['size'][2]}) placed in {mode} mode")
+    return info
 
 
 def run(world: str | Path, out: str | Path, only: list[str] | None = None, scatter_on: bool = True,
@@ -137,11 +155,18 @@ def run(world: str | Path, out: str | Path, only: list[str] | None = None, scatt
             continue
         tb = time.time()
         ctx = BuildContext(reg, tm, site, lm, seed=_seed(lid))
+        source = None
         if lid in overrides:
-            build_override(ctx, overrides[lid])
-            source = {"type": "community", **{k: overrides[lid].get(k) for k in
-                                              ("file", "source_url", "author", "license", "fidelity_review")}}
-        else:
+            spec = overrides[lid]
+            try:
+                info = build_with_override(ctx, lm, spec, work, log)
+                source = {"type": "community", "mode": spec.get("mode", "replace"), "placement": info,
+                          **{k: spec.get(k) for k in ("file", "world", "source_url", "author", "license",
+                                                      "fidelity_review")}}
+            except Exception as e:  # missing download, unsupported format...
+                log(f"    ! {lid}: community build not used ({e}); falling back to the procedural build")
+                ctx = BuildContext(reg, tm, site, lm, seed=_seed(lid))
+        if source is None:
             BUILDERS[lm["builder"]](ctx)
             fn = BUILDERS[lm["builder"]]
             source = {"type": "procedural", "generator": f"{fn.__module__}.{fn.__name__}",
@@ -196,6 +221,10 @@ def run(world: str | Path, out: str | Path, only: list[str] | None = None, scatt
         "roads": roads,
     }
     (out / "placements.json").write_text(json.dumps(log_doc, indent=2), encoding="utf-8")
+    # 7. the Atlas: teleport-menu item, arrival points checked against the written world
+    dp = datapack.write_datapack(log_doc, dst / "datapacks", World(dst, Registry(W.data_version)))
+    shutil.copytree(Path(dp["path"]), out / "datapack" / datapack.PACK, dirs_exist_ok=True)
+    log(f"  atlas datapack: {dp['destinations']} destinations on {dp['pages']} book pages")
     img = terrain_image(tm, 8)
     overlay_sites(img, tm, 8, sites, {l["id"]: l.get("footprint_r", 60) for l in lms})
     img.save(out / "overview.png")

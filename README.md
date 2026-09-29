@@ -25,6 +25,7 @@ The build takes about 4 minutes on 4 cores (a 2-minute terrain scan, then about 
 | `out/placements.json` | The log for the quest-scripting module: landmark centres, bounding boxes, points of interest (POIs), settlements and roads. |
 | `out/schematics/*.schem` | Sponge v3 schematics (WorldEdit/FAWE) of each landmark's structure layer. |
 | `out/overview.png` | The map with every located site marked. |
+| `out/datapack/atla_atlas/` | The Atlas teleport-menu datapack (already installed in the populated world). |
 
 A copy of the log, the schematics and the overview from the run against `ATLAB9k.zip` is committed in [`output/`](output/).
 
@@ -34,7 +35,7 @@ Other commands:
 python -m atla_builder locate  --world ATLAB9k.zip --out scan/        # scan + georeference + sites.json only
 python -m atla_builder build   --world ATLAB9k.zip --out out --only omashu ba_sing_se --no-scatter
 python -m atla_builder preview --terrain scan/terrain.npz --georef scan/georef.json --landmark omashu --png omashu.png
-python -m pytest -q                                                  # 39 tests
+python -m pytest -q                                                  # 56 tests
 ```
 
 ## How it works
@@ -118,11 +119,70 @@ Previews in [`docs/previews/`](docs/previews/): isometric renders of each builde
 
 The log contains 110 landmark POIs, including spawn points for creatures and characters the mod adds: Tui & La's koi, the serpent's lair, the Unagi waters and Hei Bai.
 
-## Sourcing and fidelity
+## The Atlas (teleport menu)
 
-- **No community schematics were used.** Download sites such as Planet Minecraft are not reachable from the build environment. Most community builds are also not licensed for redistribution, and their fidelity can't be reviewed from here. Every structure is therefore generated procedurally to canon references: layout, silhouette and the palette described in [`atla_builder/palettes.py`](atla_builder/palettes.py).
-- **Adding a community build.** Once one passes your fidelity review, add it to [`config/schematic_overrides.json`](config/schematic_overrides.json) with `"approved": true`. It is pasted at the located site instead of the procedural build, and its block ids are remapped for the world's version.
-- **Pasting the exported schematics.** They hold only the structure layer; the terrain integration exists only in the world. Paste them with `//schem load <id>` and then `//paste -m !minecraft:structure_void`.
+Every player gets a glowing written book, the **Atlas of the Four Nations**, the first time they join.
+Opening it shows a menu:
+
+- **Index page:** jump to Water Tribes, Air Nomads, Earth Kingdom, Fire Nation, or the villages of each nation.
+- **Nation pages:** every landmark (bold), with its points of interest underneath, such as the Spirit
+  Oasis, Lake Laogai's Dai Li base, the Earth Rumble arena and the Omashu mail chutes.
+- **Village pages:** each settlement, named by where it is (for example "Farm hamlet, NW of Omashu").
+
+Clicking an entry teleports you there. The click runs `/trigger atla_tp set <n>`, which works for
+every player without cheats. Lost the book? Run `/trigger atla_atlas`.
+
+- **How it's built:** the datapack is generated from `placements.json` by `atla_builder/datapack.py`.
+- **Arrival points:** every destination is checked against the written world and moved to the nearest
+  spot a player can stand (out of statues, wells and walls; onto cave and room floors).
+- **Versions:** the files use both the pre-1.21 and 1.21+ folder names, and both the old and new
+  text-component keys, so one pack targets Java 1.20.5 and newer. It has not been tested in-game.
+- **Reinstalling:** `python -m atla_builder datapack --log out/placements.json --world <populated world>`
+  rewrites it into an existing world.
+
+## Community builds (for the complex landmarks)
+
+The complex landmarks can use existing community builds instead of the procedural ones. The pipeline
+imports them automatically once the files are in [`community/`](community/) and approved in
+[`config/schematic_overrides.json`](config/schematic_overrides.json).
+
+- **Formats:** Sponge `.schem` (v1–3), Litematica `.litematic`, vanilla structure `.nbt`, or a region
+  copied out of a downloaded **world save** (give its `min`/`max` corners). Legacy pre-1.13 `.schematic`
+  files are detected and need converting first (WorldEdit on 1.13+: `//schem load`, then
+  `//schem save <name> sponge.3`).
+- **`replace` mode:** the build is the whole landmark. The ground is levelled under its footprint and
+  foundations are filled down to the terrain.
+- **`core` mode:** the procedural landmark is kept, and the build replaces the area around one point of
+  interest. This suits the Fire Nation palace inside the carved caldera city, or the Earth King's
+  palace inside the Ba Sing Se rings.
+- **Block entities:** signs, banners and heads are converted to the chunk's data version. Container
+  contents and entities (item frames, armor stands) are not imported, and the log says how many were
+  skipped.
+- **Fallback:** if a file is missing or unreadable, the build logs a warning and falls back to the
+  procedural landmark.
+
+**Shortlist.** These were found with web search. Planet Minecraft and the file hosts are blocked from the
+build environment, so none could be downloaded or previewed here. Check each one against the show
+before approving it.
+
+| Landmark | Candidates (see `schematic_overrides.json` for notes) |
+| --- | --- |
+| Fire Nation Capital (palace, `core`) | [Joffrey77 – Fire Nation Royal Palace](https://www.planetminecraft.com/project/fire-nation-royal-palace-avatar-the-last-airbender/) (~34k downloads), [Rokucraft](https://www.planetminecraft.com/project/the-fire-nation-palace-rokucraft/), [blazeon1234](https://abfielder.com/schematicdetail/blazeon1234/fire-nation-palace/2307) |
+| Southern Air Temple | [Rokucraft](https://www.planetminecraft.com/project/southern-air-temple-rokucraft/), [Rokucraft (older)](https://www.planetminecraft.com/project/the-southern-air-temple-jong-mu-air-temple/) |
+| Western Air Temple | [Rokucraft](https://www.planetminecraft.com/project/western-air-temple-rokucraft/), [1.16.5 build](https://www.planetminecraft.com/project/avatar-the-last-airbender-western-air-temple-1-16-5/), [another](https://www.planetminecraft.com/project/western-air-temple-avatar/) |
+| Eastern Air Temple | [Rokucraft](https://www.planetminecraft.com/project/the-eastern-airtemple-rokucraft/), [Java & Bedrock build](https://www.planetminecraft.com/project/the-eastern-air-temple/) |
+| Northern Water Tribe | [Rokucraft (2012)](https://www.planetminecraft.com/project/southern-water-tribe/), [full scale](https://www.planetminecraft.com/project/full-scale-northern-water-tribe/), [finished city](https://www.planetminecraft.com/project/the-northern-water-tribe-finished-download-link/) |
+| Omashu | [mocarona](https://www.planetminecraft.com/project/omashu/), [Avatar Omashu](https://www.planetminecraft.com/project/avatar-omashu/) |
+| Ba Sing Se (palace, `core`) | [ShadowESH map (40% complete, world download)](https://www.planetminecraft.com/project/avatar-the-last-airbender-ba-sing-se/) |
+| Wan Shi Tong's Library | [three builds](https://www.planetminecraft.com/project/wan-shi-tong-s-library-avatar-the-last-airbender/) (see config) |
+| Kyoshi Island | [Rokucraft rework](https://www.planetminecraft.com/projects/tag/rokucraft/) |
+
+No downloadable Northern Air Temple or Boiling Rock was found (AvatarMC's builds can't be downloaded),
+so those stay procedural. Check each build's licence before sharing a world that contains it.
+
+**Exported schematics.** The `.schem` files in `output/schematics/` hold only each landmark's structure
+layer; the terrain integration exists only in the world. Paste them with `//schem load <id>`, then
+`//paste -m !minecraft:structure_void`.
 
 ## Version notes
 
@@ -134,7 +194,7 @@ The log contains 110 landmark POIs, including spawn points for creatures and cha
 ## Limitations
 
 - No entities are placed: no NPCs, animals, boats as entities, or the serpent. Those belong to the mod; their spawn points are POIs in the log.
-- Signs are the only block entities written. Chests and other containers are not placed.
+- The procedural builds write no block entities except the Serpent's Pass sign. Imported community builds keep their signs, banners and heads.
 - Settlements between landmarks use generic nation-themed houses rather than named canon villages.
 
 ## Layout
@@ -142,10 +202,14 @@ The log contains 110 landmark POIs, including spawn points for creatures and cha
 ```
 atla_builder/        anvil.py (region/chunk IO), buffer.py (edit buffers & primitives), terrain.py (scan),
                      geo.py + locate.py (georef & site search), structures/ (water, air, earth, basingse,
-                     fire, kit, village), scatter.py, schem.py, pipeline.py, render.py, preview.py, cli.py
-config/              landmarks.json, schematic_overrides.json
+                     fire, kit, village), scatter.py, schem.py, imports.py (community builds),
+                     datapack.py (the Atlas), lfs.py, pipeline.py, render.py, preview.py, cli.py
+config/              landmarks.json, schematic_overrides.json (community-build shortlist)
+community/           put downloaded community builds here
+datapack/atla_atlas/ the Atlas datapack generated from the committed run
 reference/           terrain_classes.png (derived from the painted map; used for registration)
 tools/               make_reference_classes.py, preview_landmark.py
 tests/               anvil/buffer/rotation/schem/georef tests + a smoke test for every builder
 output/              placements.json, overview.png, georef.json, schematics/ from the ATLAB9k run
+.claude/skills/      visual-builder skill (image -> code protocol); skills_dist/ has the packaged .skill
 ```

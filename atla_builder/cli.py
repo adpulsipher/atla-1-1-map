@@ -23,6 +23,9 @@ def main(argv=None) -> None:
     l = sub.add_parser("locate", help="scan terrain and print landmark sites (no writes)")
     l.add_argument("--world", required=True)
     l.add_argument("--out", required=True)
+    d = sub.add_parser("datapack", help="(re)write the Atlas teleport datapack into a populated world")
+    d.add_argument("--log", required=True, help="placements.json from a build")
+    d.add_argument("--world", required=True, help="the populated world folder")
     p = sub.add_parser("preview", help="render one landmark on the scanned terrain")
     p.add_argument("--terrain", required=True, help="terrain.npz from a previous scan")
     p.add_argument("--georef", required=True)
@@ -48,6 +51,12 @@ def main(argv=None) -> None:
         sites = locate_all(tm, geo, load_landmarks())
         (out / "sites.json").write_text(json.dumps({k: v.to_json() for k, v in sites.items()}, indent=2),
                                         encoding="utf-8")
+    elif a.cmd == "datapack":
+        from .anvil import World
+        from .datapack import write_datapack
+        log = json.loads(Path(a.log).read_text(encoding="utf-8"))
+        info = write_datapack(log, Path(a.world) / "datapacks", World(a.world))
+        print(f"wrote {info['path']}: {info['destinations']} destinations, {info['pages']} pages")
     elif a.cmd == "preview":
         sys.argv = ["preview", a.terrain, a.georef, a.landmark, a.png]
         from importlib import util
