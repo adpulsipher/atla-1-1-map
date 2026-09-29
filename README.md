@@ -6,6 +6,13 @@
 
 ## Quick start
 
+**Just want the finished world?** `ATLAB9k_populated.zip` in the repo root is the populated world
+(Git LFS, 762 MB), with every landmark, settlement, road and the Atlas teleport book. On GitHub, open
+the file and click **Download raw file**. Unzip it into your `.minecraft/saves/` folder. The
+repository's "Download ZIP" button only gives you a small pointer file for it.
+
+To rebuild it yourself (for example after adding community builds):
+
 ```bash
 pip install -r requirements.txt
 python -m atla_builder build --world ATLAB9k.zip --out out --zip
